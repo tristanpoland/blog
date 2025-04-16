@@ -9,6 +9,22 @@ import mermaid from 'mermaid';
 
 const inter = Inter({ subsets: ['latin'] });
 
+if (typeof window !== 'undefined') {
+  window.addEventListener('error', (e) => {
+    const target = e.target as HTMLElement | null;
+
+    if (
+      target?.tagName === 'SCRIPT' &&
+      (target as HTMLScriptElement).src?.includes('/_next/static/chunks')
+    ) {
+      console.warn('[ChunkLoadError] Reloading due to missing chunk:', (target as HTMLScriptElement).src);
+      window.location.reload();
+    }
+  });
+}
+
+
+
 const metadata = {
   title: 'Tech Blog',
   description: 'A technical blog built with Next.js and React',
