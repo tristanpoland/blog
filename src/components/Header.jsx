@@ -50,13 +50,13 @@ export default function Navbar() {
     setIsLoading(true);
     
     if (searchQuery.trim() === '') {
-      // Show all pages and a selection of blogs by default
+      // Show all pages first, then a selection of blogs by default
       const combinedResults = [
         ...pages,
         ...blogPosts.slice(0, 3).map(post => ({
           name: post.title,
-          href: `../blog/${post.slug}`,
-          description: post.excerpt.substring(0, 100).replace(/\r\n/g, ' ').replace(/#/g, '').trim() + '...',
+          href: `../blog/posts/${post.slug}`,
+          description: post.excerpt.replace(/\r\n/g, ' ').replace(/#/g, '').replace(/\s+/g, ' ').trim().substring(0, 100) + '...',
           type: 'blog',
           date: post.date,
           readingTime: post.readingTime
@@ -85,14 +85,14 @@ export default function Navbar() {
     ).map(post => ({
       name: post.title,
       href: `../blog/${post.slug}`,
-      description: post.excerpt.substring(0, 100).replace(/\r\n/g, ' ').replace(/#/g, '').trim() + '...',
+      description: post.excerpt.replace(/\r\n/g, ' ').replace(/#/g, '').replace(/\s+/g, ' ').trim().substring(0, 100) + '...',
       type: 'blog',
       date: post.date,
       readingTime: post.readingTime
     }));
     
-    // Combine and sort results (blogs first, then pages)
-    const combinedResults = [...blogResults, ...pageResults];
+    // Combine and sort results (pages first, then blogs)
+    const combinedResults = [...pageResults, ...blogResults];
     
     setSearchResults(combinedResults);
     setSelectedResultIndex(combinedResults.length > 0 ? 0 : -1);
