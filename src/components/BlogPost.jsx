@@ -5,7 +5,7 @@ export default function BlogPost({ post }) {
   return (
     <div className="my-8 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-2">
-        <Link href={`/blog/${post.slug}`} className="text-blue-600 dark:text-blue-400 hover:underline">
+        <Link href={`/${post.slug}`} className="text-blue-600 dark:text-blue-400 hover:underline">
           {post.title}
         </Link>
       </h2>
@@ -26,7 +26,7 @@ export default function BlogPost({ post }) {
         </div>
       )}
       <p className="mb-4 text-gray-700 dark:text-gray-300">{post.excerpt}</p>
-      <Link href={`/blog/${post.slug}`} className="text-blue-600 dark:text-blue-400 hover:underline">
+      <Link href={`/${post.slug}`} className="text-blue-600 dark:text-blue-400 hover:underline">
         Read more →
       </Link>
     </div>
