@@ -7,9 +7,9 @@ const url_prefix= '../'
 
 const pages = [
   { name: 'Home', href: `${url_prefix}`, description: 'Welcome to Tristan Poland\'s personal website', pinned: true },
-  { name: 'About', href: '${url_prefix}about', description: 'Learn more about Tristan Poland and his journey', pinned: true },
-  { name: 'Blog', href: '${url_prefix}blog', description: 'Latest thoughts on web development and design', pinned: true },
-  { name: 'Projects', href: '${url_prefix}projects', description: 'Featured project: Portfolio redesign 2025', pinned: true },
+  { name: 'About', href: `${url_prefix}about`, description: 'Learn more about Tristan Poland and his journey', pinned: true },
+  { name: 'Blog', href: `${url_prefix}blog`, description: 'Latest thoughts on web development and design', pinned: true },
+  { name: 'Projects', href: `${url_prefix}projects`, description: 'Featured project: Portfolio redesign 2025', pinned: true },
   // { name: 'Contact', href: '/contact', description: 'Get in touch with Tristan Poland', pinned: false },
   // { name: 'Resources', href: '/resources', description: 'Useful tools and resources for developers', pinned: false },
   // { name: 'Testimonials', href: '/testimonials', description: 'What others say about working with Tristan', pinned: false },
