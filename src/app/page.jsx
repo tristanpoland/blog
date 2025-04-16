@@ -19,7 +19,8 @@ export default function Home() {
   return (
     <div>
       <div className="mb-12 text-center">
-        <h1 className="text-4xl font-bold mb-4">Technical Blog</h1>
+        <br></br><br></br>
+        <h1 className="text-4xl font-bold mb-4"></h1>
         <p className="text-xl text-gray-600 dark:text-gray-400">
           Exploring web development, programming, and technology
         </p>
