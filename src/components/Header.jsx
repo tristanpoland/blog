@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Menu, X, Search } from 'lucide-react';
 
 // Enhanced navigation with pinned flag
-const url_prefix= '../'
+const url_prefix= 'https://tridentforu.com/'
 
 const pages = [
   { name: 'Home', href: `${url_prefix}`, description: 'Welcome to Tristan Poland\'s personal website', pinned: true },
