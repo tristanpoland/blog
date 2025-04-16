@@ -180,7 +180,7 @@ export default function Navbar() {
       }`}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="https://tridentforu.com" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-blue-400 rounded-lg flex items-center justify-center">
                 <span className="text-black font-bold text-xl">T</span>
               </div>
