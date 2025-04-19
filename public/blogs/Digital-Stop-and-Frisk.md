@@ -1,5 +1,3 @@
-# The Digital Stop and Frisk: When Your Privacy Meets Border Control
-
 ---
 title: "The Digital Stop and Frisk: When Your Privacy Meets Border Control"
 date: "2025-04-18"
