@@ -404,3 +404,8 @@ pre[class*="language-"] {
 .dark-theme .katex {
   color: #e4e4e7;
 }
+
+.markdown-content p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

@@ -404,6 +404,10 @@ useEffect(() => {
           border-color: #2ecc71; 
           background-color: ${darkMode ? 'rgba(46, 204, 113, 0.2)' : 'rgba(46, 204, 113, 0.1)'}; 
         }
+        .markdown-content p {
+          margin-top: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
       `}</style>
     </div>
   );
