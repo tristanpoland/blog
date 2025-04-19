@@ -163,16 +163,6 @@ These measures won't make you completely immune to surveillance, but they create
 
 What about you? Have you taken steps to secure your devices, or is this all new territory? We should be acting yesterday to keep our privacy intact, but the best you can do right now is to act today before you too are subject to an unpermitted device search, or a stolen device.
 
----
-
-T  
-Tristan Poland  
-Building innovative solutions in game development, cloud infrastructure, and open-source software.
-
----
-
-## References
-
 [^1]: Electronic Frontier Foundation. "Digital Security Tips for Travelers." [https://www.eff.org/issues/travel-screening](https://www.eff.org/issues/travel-screening)
 
 [^2]: Schneier, Bruce. "Data and Goliath: The Hidden Battles to Collect Your Data and Control Your World." W.W. Norton & Company, 2015.
