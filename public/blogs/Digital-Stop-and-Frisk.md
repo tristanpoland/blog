@@ -3,7 +3,7 @@ title: "The Digital Stop and Frisk: When Your Privacy Meets Border Control"
 date: "2025-04-18"
 categories: ["Security", "Privacy", "Device Protection", "Government Overreach"]
 tags: ["Encryption", "Border Security", "Digital Rights"]
-readingTime: "30 min"
+readingTime: "30"
 ---
 
 ## Introduction
