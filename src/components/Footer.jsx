@@ -78,7 +78,7 @@ const Footer = () => {
               </p>
               <div className="space-y-3">
                 <Link 
-                  href="redstonecrafter126@gmail.com"
+                  href="mailto://redstonecrafter126@gmail.com"
                   className="inline-flex items-center text-gray-400 hover:text-blue-400 transition-colors group"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
