@@ -1,26 +1,19 @@
 [
   {
-    "slug": "Categories-with-Cats",
-    "title": "Cat-egory Theory: Understanding Abstract Math Through Our Feline Friends",
-    "date": "2025-5-13",
+    "slug": "Apple-AI-Paper",
+    "title": "The Story Behind Apple's 'Illusion of Thinking'",
+    "date": "2025-6-18",
     "categories": [
-      "Functional Programming",
-      "Math",
-      "Rust",
-      "Cats"
+      "Programing",
+      "Performance",
+      "LLMs"
     ],
     "tags": [
-      "Math"
+      "Architecture"
     ],
-    "excerpt": "\r\nWelcome to the mathematically fuzzy edges of your mind, where cats, math, and Rust collide in a spray of static fur and elegant abstraction.\r\n\r\nToda...",
-    "readingTime": 11,
-    "fileName": "Categories-with-Cats.md"
-  },
-  {
-    "slug": "CF-v-Kube",
-    "excerpt": "# The Cloud Foundry Scaling Myth: Why Kubernetes Has Become the Industry Standard\r\n\r\n## Introduction\r\n\r\nIn the rapidly evolving landscape of cloud-nat...",
-    "readingTime": 13,
-    "fileName": "CF-v-Kube.md"
+    "excerpt": "\r\n## The Story Behind Apple's \"Illusion of Thinking\"\r\n\r\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and ...",
+    "readingTime": 14,
+    "fileName": "Apple-AI-Paper.md"
   },
   {
     "slug": "Digital-Stop-and-Frisk",

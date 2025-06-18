@@ -1,5 +1,5 @@
 ---
-title: "The Story Behind Apple's "Illusion of Thinking""
+title: "The Story Behind Apple's 'Illusion of Thinking'"
 date: "2025-6-18"
 categories: ["Programing", "Performance", "LLMs"] 
 tags: ["Architecture"]
