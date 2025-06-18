@@ -115,7 +115,7 @@ This raises questions about whether Apple's research agenda is aligned with actu
 
 ## The Real Illusion Here
 
-Apple's *"Illusion of Thinking"* reads less like serious AI research and more like sophisticated damage control. The paper's conclusion that "reasoning traces are syntactic padding, not semantic computation" might be technically accurate, but it misses the larger point: whether or not it's "real" thinking (to hich most who have studied human "thinking" will tell you we dont even know enough to know what we are even looking for yet), these systems are producing useful continually improving results that users value.
+Apple's *"Illusion of Thinking"* reads less like serious AI research and more like sophisticated damage control. The paper's conclusion that "reasoning traces are syntactic padding, not semantic computation" might be technically accurate, but it misses the larger point: whether or not it's "real" thinking (to which most who have studied human "thinking" will tell you we dont even know enough to know what we are even looking for yet), these systems are producing useful continually improving results that users value.
 
 Emergent reasoning isn't bankrupt—it's challenging. It's a frontier worth exploring, not a dead end to avoid early. The fact that current implementations have limitations doesn't mean the approach is fundamentally flawed; it means there's more work to do.
 
