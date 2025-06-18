@@ -1,5 +1,28 @@
 [
   {
+    "slug": "Categories-with-Cats",
+    "title": "Cat-egory Theory: Understanding Abstract Math Through Our Feline Friends",
+    "date": "2025-5-13",
+    "categories": [
+      "Functional Programming",
+      "Math",
+      "Rust",
+      "Cats"
+    ],
+    "tags": [
+      "Math"
+    ],
+    "excerpt": "\r\nWelcome to the mathematically fuzzy edges of your mind, where cats, math, and Rust collide in a spray of static fur and elegant abstraction.\r\n\r\nToda...",
+    "readingTime": 11,
+    "fileName": "Categories-with-Cats.md"
+  },
+  {
+    "slug": "CF-v-Kube",
+    "excerpt": "# The Cloud Foundry Scaling Myth: Why Kubernetes Has Become the Industry Standard\r\n\r\n## Introduction\r\n\r\nIn the rapidly evolving landscape of cloud-nat...",
+    "readingTime": 13,
+    "fileName": "CF-v-Kube.md"
+  },
+  {
     "slug": "Digital-Stop-and-Frisk",
     "title": "The Digital Stop and Frisk: When Your Privacy Meets Border Control",
     "date": "2025-04-18",
@@ -14,9 +37,8 @@
       "Border Security",
       "Digital Rights"
     ],
-    "reading_time": "30 min",
-    "excerpt": "\r\n## Introduction\r\n\r\nI've been thinking a lot about device security lately. With increased border searches and the ease with which both government age...",
     "readingTime": 15,
+    "excerpt": "\r\n## Introduction\r\n\r\nI've been thinking a lot about device security lately. With increased border searches and the ease with which both government age...",
     "fileName": "Digital-Stop-and-Frisk.md"
   },
   {
