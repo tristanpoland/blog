@@ -1,5 +1,21 @@
 [
   {
+    "slug": "SurrealDB",
+    "title": "The SurrealDB Reality Check; Marketing vs Reality",
+    "date": "2025-6-23",
+    "categories": [
+      "Database",
+      "Performance",
+      "Marketing"
+    ],
+    "tags": [
+      "Architecture"
+    ],
+    "excerpt": "\r\n## The SurrealDB Reality Check: When Marketing Meets Performance\r\n\r\nWhen SurrealDB burst onto the scene with promises of \"one database, infinite mem...",
+    "readingTime": 6,
+    "fileName": "SurrealDB.md"
+  },
+  {
     "slug": "Apple-AI-Paper",
     "title": "The Story Behind Apple's 'Illusion of Thinking'",
     "date": "2025-6-18",
