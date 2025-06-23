@@ -26,8 +26,8 @@ if (typeof window !== 'undefined') {
 
 
 const metadata = {
-  title: 'Tech Blog',
-  description: 'A technical blog built with Next.js and React',
+  title: 'Blog - Tristan Poland',
+  description: 'A blog about game and web development, backend programming, and technology.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
