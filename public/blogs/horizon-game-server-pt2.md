@@ -76,7 +76,7 @@ impl Player {
 
 ### Building the Foundation: Event-Driven Architecture
 
-After many many itterations and rust projects taking up months of development. I grasped Rust's ownership model, I understood basic library loading, and I started building the core architecture that would eventually become Horizon. The heart of the system is an event-driven architecture that allows different game systems to communicate safely without tight coupling of plugins:
+After many many iterations and rust projects taking up months of development. I grasped Rust's ownership model, I understood basic library loading, and I started building the core architecture that would eventually become Horizon. The heart of the system is an event-driven architecture that allows different game systems to communicate safely without tight coupling of plugins:
 
 ```rust
 // From crates/event_system/src/lib.rs - our actual event system core
@@ -855,7 +855,7 @@ Compare this to Unreal Engine's typical limits of 100-200 players maximum, and t
 
 ### Development Impact
 
-**Runtime crashes in production**: None (in fact it is effectivly not possible to crash if you use the plugin framework as intended)
+**Runtime crashes in production**: None (in fact it is effectively not possible to crash if you use the plugin framework as intended)
 
 ## Lessons Learned: Building for Scale
 
@@ -908,7 +908,7 @@ The landscape of online gaming is changing. Players expect more persistent, more
 
 Horizon's goal once complete is to power other ambitious multiplayer games that need massive-scale infrastructure. We've open-sourced the server and many plugins we use in our own games and are building a community around scalable game server architecture.
 
-While we dont yet know when we will be done with Stars Beyond, I'm sure this is far from the last thrilling ride we will take to learning new tricks and tools in our efforts to make the game of our dreams.
+While we don't yet know when we will be done with Stars Beyond, I'm sure this is far from the last thrilling ride we will take to learning new tricks and tools in our efforts to make the game of our dreams.
 
 *Horizon is open source and available on GitHub. If you're building ambitious multiplayer games, join us in pushing the boundaries of what's possible.* [GitHub](https://github.com/Far-Beyond-Dev/Horizon)
 
