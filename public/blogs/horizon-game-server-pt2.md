@@ -480,7 +480,7 @@ graph TB
 
 ### Channel Architecture Implementation
 
-Every object that can replicate data from the server to clients has a "channel" - essentially a multicast room which we can dynamically add and remove players from. Thinkk of this like a mailing list in an Email client, or a goup DM on any popular messaging platform. This allows us to send a message once to as many players as we want, but have only to those who need to see it in each group:
+Every object that can replicate data from the server to clients has a "channel" - essentially a multicast room which we can dynamically add and remove players from. Think of this like a mailing list in an Email client, or a group DM on any popular messaging platform. This allows us to send a message once to as many players as we want, but have only to those who need to see it in each group:
 
 
 *** THIS IS A CONCEPT TO GIVE A GENERAL IDEA*** This code has not yet been written fully
