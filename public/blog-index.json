@@ -1,5 +1,29 @@
 [
   {
+    "slug": "horizon-game-server-pt2",
+    "title": "Horizon: The game server built for performance at scale",
+    "date": "2025-06-24",
+    "categories": [
+      "Engineering",
+      "Multiplayer",
+      "Gaming",
+      "Rust"
+    ],
+    "tags": [
+      "GameDev",
+      "Rust",
+      "MMO",
+      "Networking",
+      "Unreal Engine",
+      "Stars Beyond",
+      "Server Meshing",
+      "Performance"
+    ],
+    "excerpt": "\r\n*The technical journey of building a game server that breaks Unreal Engine's limits and powers massive space battles*\r\n\r\n## The Problem That Started...",
+    "readingTime": 21,
+    "fileName": "horizon-game-server-pt2.md"
+  },
+  {
     "slug": "SurrealDB",
     "title": "The SurrealDB Reality Check; Marketing vs Reality",
     "date": "2025-6-23",
