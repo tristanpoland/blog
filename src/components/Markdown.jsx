@@ -229,7 +229,13 @@ useEffect(() => {
   if (!content) return null;
 
   // Choose syntax highlighting theme based on dark mode
-  const codeStyle = darkMode ? vscDarkPlus : prism;
+  const codeStyle = {
+    ... (darkMode ? vscDarkPlus : prism),
+    'pre[class*="language-"]': {
+      ...(darkMode ? vscDarkPlus['pre[class*="language-"]'] : prism['pre[class*="language-"]']),
+      margin: 0, // Remove default margin
+    },
+  };
 
   // Only render ReactMarkdown on the client side
   return (
