@@ -1,5 +1,24 @@
 [
   {
+    "slug": "Buzzwords-The-Edge",
+    "title": "Buzzword Koolaid: What even is 'The Edge'? Why should you care?",
+    "date": "2025-7-11",
+    "categories": [
+      "DevOps",
+      "Performance",
+      "Networking"
+    ],
+    "tags": [
+      "Architecture",
+      "DevOps",
+      "Performance",
+      "Networking"
+    ],
+    "excerpt": "\r\n# Edge Computing: Beyond the Buzzword Fog\r\n\r\nEdge computing has become the latest Silicon Valley darling, promising to revolutionize everything from...",
+    "readingTime": 18,
+    "fileName": "Buzzwords-The-Edge.md"
+  },
+  {
     "slug": "horizon-game-server-pt2",
     "title": "Horizon: The game server built for performance at scale",
     "date": "2025-06-24",
