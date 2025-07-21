@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Unreal Engine: Hard refs, Memory management, and Performance"
 date: "2025-07-20"
 categories: ["Technology", "Development", "Rant"]
 tags: ["Comp Sci", "Rust Development", "Unreal Engine", "Rant"]
