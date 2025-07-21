@@ -184,14 +184,14 @@ graph TD
     LoadB --> LoadF(Loads UI_Widget_BP)
     LoadF --> LoadG(Loads Font_Asset)
     LoadF --> LoadH(Loads IconPack_Asset)
-    style Loading fill:#f9f,stroke:#333,stroke-width:2px
-    style LoadB fill:#f9f,stroke:#333,stroke-width:2px
-    style LoadC fill:#f9f,stroke:#333,stroke-width:2px
-    style LoadD fill:#f9f,stroke:#333,stroke-width:2px
-    style LoadE fill:#f9f,stroke:#333,stroke-width:2px
-    style LoadF fill:#f9f,stroke:#333,stroke-width:2px
-    style LoadG fill:#f9f,stroke:#333,stroke-width:2px
-    style LoadH fill:#f9f,stroke:#333,stroke-width:2px
+    style Loading fill:#f9f,stroke:#333,color:#111,stroke-width:2px
+    style LoadB fill:#f9f,stroke:#333,color:#111,stroke-width:2px
+    style LoadC fill:#f9f,stroke:#333,color:#111,stroke-width:2px
+    style LoadD fill:#f9f,stroke:#333,color:#111,stroke-width:2px
+    style LoadE fill:#f9f,stroke:#333,color:#111,stroke-width:2px
+    style LoadF fill:#f9f,stroke:#333,color:#111,stroke-width:2px
+    style LoadG fill:#f9f,stroke:#333,color:#111,stroke-width:2px
+    style LoadH fill:#f9f,stroke:#333,color:#111,stroke-width:2px
 ```
 
 **Explanation:** In this scenario, simply loading the GameInstance_BP (which might be loaded at game startup) triggers the loading of PlayerController_BP. Loading class definitions themselves is normal and typically very cheap—most engines and languages do this as part of initialization. What is abnormal in Unreal's Blueprint system is that all referenced asset data (textures, materials, fonts, icons, etc.) is also loaded immediately and transitively, regardless of whether those assets are actually needed at that moment. This eager, asset-level loading—rather than just class metadata—is the primary cause of memory bloat and slow startup times.
