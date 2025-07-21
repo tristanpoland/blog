@@ -219,9 +219,9 @@ graph TD
         Other_LoadUI --> Other_Gameplay
     end
 
-    style UE_MemoryFull fill:#f88,stroke:#333,stroke-width:2px
-    style UE_Bloat fill:#f88,stroke:#333,stroke-width:2px
-    style Other_MemoryLean fill:#8f8,stroke:#333,stroke-width:2px
+    style UE_MemoryFull fill:#f88,stroke:#333,color:#111,stroke-width:2px
+    style UE_Bloat fill:#f88,stroke:#333,color:#111,stroke-width:2px
+    style Other_MemoryLean fill:#8f8,stroke:#333,color:#111,stroke-width:2px
 ```
 
 **Explanation:** The "Eager Loading" path, typical of Unreal Blueprints, shows that at game startup, a large portion of assets are loaded into memory, leading to memory bloat and potential performance issues during gameplay. In contrast, the "Lazy Loading" approach, common in other engines, loads only essential core systems at startup, keeping memory lean. Assets like Weapon_BP or UI_Widget_BP are only loaded when explicitly requested during gameplay, optimizing memory usage and reducing initial load times.
