@@ -1,5 +1,24 @@
 [
   {
+    "slug": "hard-refs-brainmelt",
+    "title": "Unreal Engine: Hard refs, Memory management, and Performance",
+    "date": "2025-07-20",
+    "categories": [
+      "Technology",
+      "Development",
+      "Rant"
+    ],
+    "tags": [
+      "Comp Sci",
+      "Rust Development",
+      "Unreal Engine",
+      "Rant"
+    ],
+    "excerpt": "\r\n# A brief introduction to the problem\r\n\r\nUnreal Engine's Blueprint visual scripting system stands as a cornerstone of its accessibility and rapid pr...",
+    "readingTime": 35,
+    "fileName": "hard-refs-brainmelt.md"
+  },
+  {
     "slug": "Buzzwords-The-Edge",
     "title": "Buzzword Koolaid: What even is 'The Edge'?",
     "date": "2025-7-11",
@@ -208,6 +227,12 @@
     "excerpt": "\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's ...",
     "readingTime": 4,
     "fileName": "horizon-game-server-pt1.md"
+  },
+  {
+    "slug": "research-drafts",
+    "excerpt": "Absolutely — your blog is sharp, incisive, and accurate, but adding the critical nuance about **Blueprint Interfaces** (BPIs) and their **hidden costs...",
+    "readingTime": 26,
+    "fileName": "research-drafts.md"
   },
   {
     "slug": "rise-of-tech-tribalism",
