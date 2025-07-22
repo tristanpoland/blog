@@ -14,8 +14,8 @@
       "Unreal Engine",
       "Rant"
     ],
-    "excerpt": "\r\n# A brief introduction to the problem\r\n\r\nUnreal Engine's Blueprint visual scripting system stands as a cornerstone of its accessibility and rapid pr...",
-    "readingTime": 35,
+    "excerpt": "\r\n# A Brief Intro to the Issue\r\n\r\nUnreal Engine's Blueprint visual scripting system stands as a cornerstone of its accessibility and rapid prototyping...",
+    "readingTime": 36,
     "fileName": "hard-refs-brainmelt.md"
   },
   {
@@ -227,12 +227,6 @@
     "excerpt": "\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's ...",
     "readingTime": 4,
     "fileName": "horizon-game-server-pt1.md"
-  },
-  {
-    "slug": "research-drafts",
-    "excerpt": "Absolutely — your blog is sharp, incisive, and accurate, but adding the critical nuance about **Blueprint Interfaces** (BPIs) and their **hidden costs...",
-    "readingTime": 26,
-    "fileName": "research-drafts.md"
   },
   {
     "slug": "rise-of-tech-tribalism",

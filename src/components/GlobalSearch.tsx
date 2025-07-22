@@ -3,7 +3,43 @@ import { Search, X, Calendar, Clock, Tag, ExternalLink, Home, User, BookOpen, Fo
 
 const url_prefix = 'https://tridentforu.com/';
 
-const pages = [
+interface Page {
+  name: string;
+  href: string;
+  description: string;
+  pinned: boolean;
+}
+
+interface BlogPost {
+  title: string;
+  slug: string;
+  excerpt?: string;
+  date: string;
+  readingTime: number;
+  categories?: string[];
+  tags?: string[];
+  author?: string;
+}
+
+interface SearchResult {
+  name: string;
+  href: string;
+  description: string;
+  type?: 'blog';
+  date?: string;
+  readingTime?: number;
+  categories?: string[];
+  tags?: string[];
+  author?: string;
+  pinned?: boolean;
+}
+
+interface SearchModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const pages: Page[] = [
   { name: 'Home', href: url_prefix, description: 'Welcome to Tristan Poland\'s personal website', pinned: true },
   { name: 'About', href: `${url_prefix}about`, description: 'Learn more about Tristan Poland and his journey', pinned: true },
   { name: 'Blog', href: `${url_prefix}blog`, description: 'Latest thoughts on web development and design', pinned: true },
@@ -16,25 +52,54 @@ const pages = [
   // { name: 'Gallery', href: '/gallery', description: 'Visual showcase of previous projects', pinned: false },
 ];
 
-export default function SearchModal({ isOpen, onClose }) {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
-  const [selectedResultIndex, setSelectedResultIndex] = useState(-1);
-  const [selectedResult, setSelectedResult] = useState(null);
-  const [isPeeking, setIsPeeking] = useState(false);
-  const [blogPosts, setBlogPosts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const searchInputRef = useRef(null);
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [selectedResultIndex, setSelectedResultIndex] = useState<number>(-1);
+  const [selectedResult, setSelectedResult] = useState<SearchResult | null>(null);
+  const [isPeeking, setIsPeeking] = useState<boolean>(false);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Helper function to safely convert to lowercase
+  const safeToLowerCase = (str: string | undefined): string => {
+    return str ? str.toLowerCase() : '';
+  };
+
+  // Helper function to truncate text and ensure it's single line
+  const truncateText = (text: string | undefined, maxLength: number): string => {
+    if (!text) return '';
+    // Remove line breaks, markdown symbols, and excessive spaces
+    const cleanText = text
+      .replace(/\r?\n/g, ' ')
+      .replace(/#/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    
+    if (cleanText.length <= maxLength) return cleanText;
+    return cleanText.substring(0, maxLength) + '...';
+  };
 
   // Fetch blog posts
   useEffect(() => {
-    const fetchBlogPosts = async () => {
+    const fetchBlogPosts = async (): Promise<void> => {
       try {
         const response = await fetch(`${url_prefix}blog/blog-index.json`);
-        const data = await response.json();
-        setBlogPosts(data);
+        const data: unknown = await response.json();
+        // Ensure data is an array and all posts have required fields
+        const validatedData = Array.isArray(data) ? data.filter((post: unknown): post is BlogPost => 
+          post !== null &&
+          typeof post === 'object' && 
+          'title' in post &&
+          'slug' in post &&
+          typeof post.title === 'string' &&
+          typeof post.slug === 'string'
+        ) : [];
+        setBlogPosts(validatedData);
       } catch (error) {
         console.error('Error fetching blog posts:', error);
+        setBlogPosts([]); // Ensure we always set an array
       }
     };
     
@@ -47,18 +112,24 @@ export default function SearchModal({ isOpen, onClose }) {
     
     if (searchQuery.trim() === '') {
       // Always show pages first, then blogs
-      const pageResults = [...pages];
-      const blogResults = blogPosts.slice(0, 3).map(post => ({
-        name: post.title,
-        href: `${url_prefix}blog/posts/${post.slug}`,
-        description: truncateText(post.excerpt, 100),
-        type: 'blog',
-        date: post.date,
-        readingTime: post.readingTime,
-        categories: post.categories,
-        tags: post.tags,
-        author: post.author
-      }));
+      const pageResults: SearchResult[] = [...pages];
+      const blogResults: SearchResult[] = blogPosts.slice(0, 3).map(post => {
+        // Ensure post has required fields before processing
+        if (!post || !post.title || !post.slug) {
+          return null;
+        }
+        return {
+          name: post.title,
+          href: `${url_prefix}blog/posts/${post.slug}`,
+          description: truncateText(post.excerpt, 100),
+          type: 'blog' as const,
+          date: post.date,
+          readingTime: post.readingTime,
+          categories: post.categories,
+          tags: post.tags,
+          author: post.author
+        };
+      }).filter((result): result is SearchResult => result !== null);
       
       // Combine with pages first, then blogs
       const combinedResults = [...pageResults, ...blogResults];
@@ -68,25 +139,32 @@ export default function SearchModal({ isOpen, onClose }) {
       return;
     }
 
-    const query = searchQuery.toLowerCase();
+    const query = safeToLowerCase(searchQuery);
     
     // Search in pages
-    const pageResults = pages.filter(page => 
-      page.name.toLowerCase().includes(query) || 
-      page.description.toLowerCase().includes(query)
+    const pageResults: SearchResult[] = pages.filter(page => 
+      safeToLowerCase(page.name).includes(query) || 
+      safeToLowerCase(page.description).includes(query)
     );
     
-    // Search in blog posts
-    const blogResults = blogPosts.filter(post => 
-      post.title.toLowerCase().includes(query) || 
-      post.excerpt.toLowerCase().includes(query) ||
-      post.categories.some(category => category.toLowerCase().includes(query)) ||
-      post.tags.some(tag => tag.toLowerCase().includes(query))
-    ).map(post => ({
+    // Search in blog posts with additional validation
+    const blogResults: SearchResult[] = blogPosts.filter(post => {
+      // Ensure post exists and has required fields
+      if (!post || !post.title || !post.slug) {
+        return false;
+      }
+      
+      return (
+        safeToLowerCase(post.title).includes(query) || 
+        safeToLowerCase(post.excerpt).includes(query) ||
+        (post.categories && Array.isArray(post.categories) && post.categories.some(category => safeToLowerCase(category).includes(query))) ||
+        (post.tags && Array.isArray(post.tags) && post.tags.some(tag => safeToLowerCase(tag).includes(query)))
+      );
+    }).map(post => ({
       name: post.title,
       href: `${url_prefix}blog/posts/${post.slug}`,
       description: truncateText(post.excerpt, 100),
-      type: 'blog',
+      type: 'blog' as const,
       date: post.date,
       readingTime: post.readingTime,
       categories: post.categories,
@@ -111,23 +189,12 @@ export default function SearchModal({ isOpen, onClose }) {
     }
   }, [selectedResultIndex, searchResults]);
 
-  // Helper function to truncate text and ensure it's single line
-  const truncateText = (text, maxLength) => {
-    if (!text) return '';
-    // Remove line breaks, markdown symbols, and excessive spaces
-    const cleanText = text
-      .replace(/\r?\n/g, ' ')
-      .replace(/#/g, '')
-      .replace(/\s+/g, ' ')
-      .trim();
-    
-    if (cleanText.length <= maxLength) return cleanText;
-    return cleanText.substring(0, maxLength) + '...';
-  };
-
   // Handle keyboard events
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    // Only add event listeners in the browser environment
+    if (typeof window === 'undefined') return;
+    
+    const handleKeyDown = (e: KeyboardEvent): void => {
       // Close search with escape
       if (e.key === 'Escape' && isOpen) {
         onClose();
@@ -135,8 +202,8 @@ export default function SearchModal({ isOpen, onClose }) {
         setSelectedResult(null);
         setIsPeeking(false);
       }
-      // Handle spacebar for peek
-      else if (e.key === ' ' && isOpen && selectedResultIndex >= 0) {
+      // Handle left ctrl for peek
+      else if (e.key === 'Control' && e.location === KeyboardEvent.DOM_KEY_LOCATION_LEFT && isOpen && selectedResultIndex >= 0) {
         e.preventDefault();
         setIsPeeking(true);
       }
@@ -159,8 +226,8 @@ export default function SearchModal({ isOpen, onClose }) {
       }
     };
     
-    const handleKeyUp = (e) => {
-      if (e.key === ' ' && isOpen) {
+    const handleKeyUp = (e: KeyboardEvent): void => {
+      if (e.key === 'Control' && e.location === KeyboardEvent.DOM_KEY_LOCATION_LEFT && isOpen) {
         setIsPeeking(false);
       }
     };
@@ -180,7 +247,7 @@ export default function SearchModal({ isOpen, onClose }) {
   useEffect(() => {
     if (isOpen && searchInputRef.current) {
       setTimeout(() => {
-        searchInputRef.current.focus();
+        searchInputRef.current?.focus();
       }, 100);
     }
   }, [isOpen]);
@@ -195,16 +262,18 @@ export default function SearchModal({ isOpen, onClose }) {
     }
   }, [isOpen]);
 
-  const handleResultSelection = (result) => {
+  const handleResultSelection = (result: SearchResult): void => {
     console.log(`Navigating to: ${result.href}`);
     onClose();
     
-    // Use window.location.href for direct navigation to avoid any path issues
-    window.location.href = result.href;
+    // Safely handle navigation in both client and static builds
+    if (typeof window !== 'undefined') {
+      window.location.href = result.href;
+    }
   };
 
   // Format date for blog posts
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string): string => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -214,7 +283,7 @@ export default function SearchModal({ isOpen, onClose }) {
   };
 
   // Get icon for result type
-  const getResultIcon = (result) => {
+  const getResultIcon = (result: SearchResult): JSX.Element => {
     if (result.type === 'blog') return <BookOpen className="h-4 w-4" />;
     if (result.name === 'Home') return <Home className="h-4 w-4" />;
     if (result.name === 'About') return <User className="h-4 w-4" />;
@@ -302,7 +371,7 @@ export default function SearchModal({ isOpen, onClose }) {
                   {/* Display page results */}
                   {searchResults
                     .filter(result => !result.type)
-                    .map((result, index) => {
+                    .map((result) => {
                       const resultIndex = searchResults.indexOf(result);
                       return (
                         <div 
@@ -343,7 +412,7 @@ export default function SearchModal({ isOpen, onClose }) {
                   {/* Display blog results */}
                   {searchResults
                     .filter(result => result.type === 'blog')
-                    .map((result, index) => {
+                    .map((result) => {
                       const resultIndex = searchResults.indexOf(result);
                       return (
                         <div 
@@ -361,7 +430,7 @@ export default function SearchModal({ isOpen, onClose }) {
                               </div>
                               <div className="flex space-x-2" style={{whiteSpace: 'nowrap'}}>
                                 <div className="bg-blue-900/40 text-blue-300 text-xs px-2 py-0.5 rounded" style={{whiteSpace: 'nowrap'}}>
-                                  {formatDate(result.date)}
+                                  {result.date && formatDate(result.date)}
                                 </div>
                                 <div className="bg-gray-800 text-gray-300 text-xs px-2 py-0.5 rounded" style={{whiteSpace: 'nowrap'}}>
                                   {result.readingTime} min read
@@ -385,7 +454,7 @@ export default function SearchModal({ isOpen, onClose }) {
                     )}
                     {searchResults
                       .filter(result => !result.type)
-                      .map((result, index) => {
+                      .map((result) => {
                         const resultIndex = searchResults.indexOf(result);
                         return (
                           <div 
@@ -425,7 +494,7 @@ export default function SearchModal({ isOpen, onClose }) {
                     )}
                     {searchResults
                       .filter(result => result.type === 'blog')
-                      .map((result, index) => {
+                      .map((result) => {
                         const resultIndex = searchResults.indexOf(result);
                         return (
                           <div 
@@ -443,7 +512,7 @@ export default function SearchModal({ isOpen, onClose }) {
                               </div>
                               <div className="flex space-x-2" style={{whiteSpace: 'nowrap', overflow: 'hidden'}}>
                                 <div className="bg-blue-900/40 text-blue-300 text-xs px-2 py-0.5 rounded" style={{whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '7em'}}>
-                                  {formatDate(result.date)}
+                                  {result.date && formatDate(result.date)}
                                 </div>
                                 <div className="bg-gray-800 text-gray-300 text-xs px-2 py-0.5 rounded" style={{whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '8em'}}>
                                   {result.readingTime} min read
@@ -463,7 +532,7 @@ export default function SearchModal({ isOpen, onClose }) {
           {searchResults.length > 0 && (
             <div className="p-3 border-t border-gray-800 text-xs flex justify-between text-gray-500 flex-shrink-0">
               <div>Press <kbd className="bg-gray-800 rounded px-1 py-0.5">↑</kbd> <kbd className="bg-gray-800 rounded px-1 py-0.5">↓</kbd> to navigate</div>
-              <div>Hold <kbd className="bg-gray-800 rounded px-1 py-0.5">Space</kbd> to peek • <kbd className="bg-gray-800 rounded px-1 py-0.5">Enter</kbd> to select</div>
+              <div>Hold <kbd className="bg-gray-800 rounded px-1 py-0.5">Left Ctrl</kbd> to peek • <kbd className="bg-gray-800 rounded px-1 py-0.5">Enter</kbd> to select</div>
             </div>
           )}
         </div>
@@ -518,7 +587,7 @@ export default function SearchModal({ isOpen, onClose }) {
                         <Calendar className="h-3 w-3" />
                         Published
                       </h3>
-                      <p className="text-white">{formatDate(selectedResult.date)}</p>
+                      <p className="text-white">{selectedResult.date && formatDate(selectedResult.date)}</p>
                     </div>
                     <div>
                       <h3 className="text-sm font-medium text-gray-400 mb-2 flex items-center gap-1">
