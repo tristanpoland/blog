@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, Calendar, Clock, Tag, ExternalLink, Home, User, BookOpen, FolderOpen } from 'lucide-react';
 
 const url_prefix = 'https://tridentforu.com/';
@@ -113,23 +113,25 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     if (searchQuery.trim() === '') {
       // Always show pages first, then blogs
       const pageResults: SearchResult[] = [...pages];
-      const blogResults: SearchResult[] = blogPosts.slice(0, 3).map(post => {
-        // Ensure post has required fields before processing
-        if (!post || !post.title || !post.slug) {
-          return null;
-        }
-        return {
-          name: post.title,
-          href: `${url_prefix}blog/posts/${post.slug}`,
-          description: truncateText(post.excerpt, 100),
-          type: 'blog' as const,
-          date: post.date,
-          readingTime: post.readingTime,
-          categories: post.categories,
-          tags: post.tags,
-          author: post.author
-        };
-      }).filter((result): result is SearchResult => result !== null);
+      const blogResults: SearchResult[] = blogPosts.slice(0, 3)
+        .map(post => {
+          // Ensure post has required fields before processing
+          if (!post || !post.title || !post.slug) {
+            return null;
+          }
+          return {
+            name: post.title,
+            href: `${url_prefix}blog/posts/${post.slug}`,
+            description: truncateText(post.excerpt, 100),
+            type: 'blog' as const,
+            date: post.date,
+            readingTime: post.readingTime,
+            categories: post.categories,
+            tags: post.tags,
+            author: post.author
+          };
+        })
+        .filter(result => result !== null) as SearchResult[];
       
       // Combine with pages first, then blogs
       const combinedResults = [...pageResults, ...blogResults];
@@ -283,7 +285,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   };
 
   // Get icon for result type
-  const getResultIcon = (result: SearchResult): JSX.Element => {
+  const getResultIcon = (result: SearchResult): React.JSX.Element => {
     if (result.type === 'blog') return <BookOpen className="h-4 w-4" />;
     if (result.name === 'Home') return <Home className="h-4 w-4" />;
     if (result.name === 'About') return <User className="h-4 w-4" />;
