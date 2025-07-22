@@ -204,8 +204,13 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         setSelectedResult(null);
         setIsPeeking(false);
       }
-      // Handle left ctrl for peek
-      else if (e.key === 'Control' && e.location === KeyboardEvent.DOM_KEY_LOCATION_LEFT && isOpen && selectedResultIndex >= 0) {
+      // Handle left alt for peek
+      else if (
+        (e.key === 'Alt') &&
+        (e.location === KeyboardEvent.DOM_KEY_LOCATION_LEFT) &&
+        isOpen &&
+        selectedResultIndex >= 0
+      ) {
         e.preventDefault();
         setIsPeeking(true);
       }
