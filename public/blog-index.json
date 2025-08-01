@@ -1,5 +1,24 @@
 [
   {
+    "slug": "somebodys-watchin-me",
+    "title": "Somebody's Watchin' Me: Privacy Under Gov't Surveillance",
+    "date": "2025-07-31",
+    "categories": [
+      "Security",
+      "Privacy",
+      "Device Protection",
+      "Government Overreach"
+    ],
+    "tags": [
+      "Encryption",
+      "Surveillance",
+      "Digital Rights"
+    ],
+    "excerpt": "\r\n*Published July 31, 2025*\r\n\r\n**Disclaimer: This content is for informational purposes and is not legal advice.**\r\n\r\nThe most dangerous government pr...",
+    "readingTime": 28,
+    "fileName": "somebodys-watchin-me.md"
+  },
+  {
     "slug": "hard-refs-brainmelt",
     "title": "Unreal Engine: Hard refs, Memory management, and Performance",
     "date": "2025-07-20",
