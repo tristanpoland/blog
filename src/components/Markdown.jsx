@@ -242,7 +242,10 @@ useEffect(() => {
     <div className={`markdown-content ${darkMode ? 'dark-theme' : 'light-theme'}`}>
       {isMounted ? (
         <ReactMarkdown
-          remarkPlugins={[remarkGfm, remarkMath]}
+          remarkPlugins={[
+            remarkGfm,
+            [remarkMath, { singleDollarTextMath: false }],
+          ]}
           rehypePlugins={[
             rehypeRaw,
             [rehypeSanitize, customSchema],
