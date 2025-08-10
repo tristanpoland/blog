@@ -1,5 +1,23 @@
 [
   {
+    "slug": "OS-Security-Showdown",
+    "title": "Which Desktop OS Is Actually the Most Secure?",
+    "date": "2025-8-9",
+    "categories": [
+      "Computers",
+      "Operating Systems",
+      "Security"
+    ],
+    "tags": [
+      "Computers",
+      "Operating Systems",
+      "Security"
+    ],
+    "excerpt": "\r\n## The TL;DR\r\n\r\n* **Short answer:** For **typical desktop users** running stock operating systems without additional security software, **Windows 11...",
+    "readingTime": 16,
+    "fileName": "OS-Security-Showdown.md"
+  },
+  {
     "slug": "somebodys-watchin-me",
     "title": "Somebody's Watchin' Me: Privacy Under Gov't Surveillance",
     "date": "2025-07-31",
