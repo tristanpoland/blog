@@ -1,5 +1,23 @@
 [
   {
+    "slug": "TPM-Modules",
+    "title": "TPM 2.0: Separating Security Facts from Fiction",
+    "date": "2025-8-10",
+    "categories": [
+      "Computers",
+      "Operating Systems",
+      "Security"
+    ],
+    "tags": [
+      "Computers",
+      "Operating Systems",
+      "Security"
+    ],
+    "excerpt": "\r\n# The basics\r\n\r\nThe Trusted Platform Module (TPM) 2.0 has become one of cybersecurity's most polarizing technologies, generating fierce debate betwe...",
+    "readingTime": 10,
+    "fileName": "TPM-Modules.md"
+  },
+  {
     "slug": "OS-Security-Showdown",
     "title": "Which Desktop OS Is Actually the Most Secure?",
     "date": "2025-8-9",
