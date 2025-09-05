@@ -1,5 +1,25 @@
 [
   {
+    "slug": "somebodys-watchin-me-2",
+    "title": "Graphite and Pegasus; No privacy is not dead",
+    "date": "2025-9-5",
+    "categories": [
+      "Security",
+      "Privacy",
+      "Device Protection",
+      "Government Overreach"
+    ],
+    "tags": [
+      "Encryption",
+      "Surveillance",
+      "Digital Rights",
+      "Spyware"
+    ],
+    "excerpt": "\r\n# Mobile Spyware Reality Check: What Pegasus and Graphite Actually Do (And Don't Do)\r\n\r\nIf you've spent any time on TikTok or Instagram lately, you'...",
+    "readingTime": 17,
+    "fileName": "somebodys-watchin-me-2.md"
+  },
+  {
     "slug": "TPM-Modules",
     "title": "TPM 2.0: Separating Security Facts from Fiction",
     "date": "2025-8-10",
@@ -13,7 +33,7 @@
       "Operating Systems",
       "Security"
     ],
-    "excerpt": "\r\n# The basics\r\n\r\nThe Trusted Platform Module (TPM) 2.0 has become one of cybersecurity's most polarizing technologies, generating fierce debate betwe...",
+    "excerpt": "\n# The basics\n\nThe Trusted Platform Module (TPM) 2.0 has become one of cybersecurity's most polarizing technologies, generating fierce debate between ...",
     "readingTime": 10,
     "fileName": "TPM-Modules.md"
   },
@@ -31,7 +51,7 @@
       "Operating Systems",
       "Security"
     ],
-    "excerpt": "\r\n## The TL;DR\r\n\r\n* **Short answer:** For **typical desktop users** running stock operating systems without additional security software, **Windows 11...",
+    "excerpt": "\n## The TL;DR\n\n* **Short answer:** For **typical desktop users** running stock operating systems without additional security software, **Windows 11** ...",
     "readingTime": 16,
     "fileName": "OS-Security-Showdown.md"
   },
@@ -144,7 +164,7 @@
     "tags": [
       "Architecture"
     ],
-    "excerpt": "\r\n## The Story Behind Apple's \"Illusion of Thinking\"\r\n\r\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and ...",
+    "excerpt": "\n## The Story Behind Apple's \"Illusion of Thinking\"\n\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and Lim...",
     "readingTime": 14,
     "fileName": "Apple-AI-Paper.md"
   },
@@ -184,7 +204,7 @@
       "WSL",
       "Dev Containers"
     ],
-    "excerpt": "\r\n## Introduction\r\n\r\nBack in January 2024, I finally bit the bullet and grabbed a Lenovo Legion Slim 7 16IRH8. It showed up about a week later, and I'...",
+    "excerpt": "\n## Introduction\n\nBack in January 2024, I finally bit the bullet and grabbed a Lenovo Legion Slim 7 16IRH8. It showed up about a week later, and I've ...",
     "readingTime": 8,
     "fileName": "Lenovo-Legion-Slim-7.md"
   },
@@ -198,7 +218,7 @@
     "tags": [
       "VPNs"
     ],
-    "excerpt": "\r\n# Addressing the issue\r\n\r\nWe have all seen segments on YouTube and platforms like it advertising that you are \"safer\" online when using a VPN. This ...",
+    "excerpt": "\n# Addressing the issue\n\nWe have all seen segments on YouTube and platforms like it advertising that you are \"safer\" online when using a VPN. This can...",
     "readingTime": 5,
     "fileName": "VPNs-wont-save-us.md"
   },
@@ -215,7 +235,7 @@
       "Monoliths",
       "Architecture"
     ],
-    "excerpt": "\r\n# The Ruby Monolith Mindset: When Familiarity Breeds Technical Debt\r\n\r\nIn the ever-evolving landscape of software development, certain patterns emer...",
+    "excerpt": "\n# The Ruby Monolith Mindset: When Familiarity Breeds Technical Debt\n\nIn the ever-evolving landscape of software development, certain patterns emerge ...",
     "readingTime": 8,
     "fileName": "The-Ruby-Monolith-Mindset.md"
   },
@@ -230,7 +250,7 @@
     "tags": [
       "Architecture"
     ],
-    "excerpt": "\r\n# Macros VS Functions, and When to Apply Them\r\n\r\nRecently I came across a group of individuals that seemed convinced that macros were terrible and a...",
+    "excerpt": "\n# Macros VS Functions, and When to Apply Them\n\nRecently I came across a group of individuals that seemed convinced that macros were terrible and alwa...",
     "readingTime": 9,
     "fileName": "Macros-vs-Functions.md"
   },
@@ -245,7 +265,7 @@
     "tags": [
       "Architecture"
     ],
-    "excerpt": "\r\nIn the world of Unreal Engine 5 game development (particularly in Blueprint), there's a persistent myth that casting is inherently bad for performan...",
+    "excerpt": "\nIn the world of Unreal Engine 5 game development (particularly in Blueprint), there's a persistent myth that casting is inherently bad for performanc...",
     "readingTime": 5,
     "fileName": "Demystifying-Casting.md"
   },
@@ -261,7 +281,7 @@
     "tags": [
       "Automation"
     ],
-    "excerpt": "\r\nAs a software developer, I've long been fascinated by the intricacies of CI/CD systems. Recently, I embarked on an ambitious project: creating a Rus...",
+    "excerpt": "\nAs a software developer, I've long been fascinated by the intricacies of CI/CD systems. Recently, I embarked on an ambitious project: creating a Rust...",
     "readingTime": 3,
     "fileName": "CICD-reimagined.md"
   },
@@ -279,7 +299,7 @@
       "Automation",
       "Distributed Computing"
     ],
-    "excerpt": "\r\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's...",
+    "excerpt": "\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's ...",
     "readingTime": 4,
     "fileName": "horizon-game-server-pt1.md"
   },
@@ -294,7 +314,7 @@
     "tags": [
       "Architecture"
     ],
-    "excerpt": "\r\n## A brief introduction to the problem\r\n\r\nIn recent years, a concerning trend has emerged in the tech world: the rise of what we might call \"tech tr...",
+    "excerpt": "\n## A brief introduction to the problem\n\nIn recent years, a concerning trend has emerged in the tech world: the rise of what we might call \"tech triba...",
     "readingTime": 9,
     "fileName": "rise-of-tech-tribalism.md"
   }
