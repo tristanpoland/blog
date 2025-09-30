@@ -1,6 +1,6 @@
 ---
 title: "Type Safety and Documentation in Rust Node Graph Systems" 
-date: "2024-10-27"
+date: "2025-09-30"
 categories: ["Engineering", "Rust", "Architecture"]
 tags: ["Rust", "Node Graph", "TypeId", "Documentation", "Type Safety"]
 ---
