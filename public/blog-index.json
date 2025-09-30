@@ -223,6 +223,26 @@
     "fileName": "VPNs-wont-save-us.md"
   },
   {
+    "slug": "Node-Nonesense-1",
+    "title": "Type Safety and Documentation in Rust Node Graph Systems",
+    "date": "2024-10-27",
+    "categories": [
+      "Engineering",
+      "Rust",
+      "Architecture"
+    ],
+    "tags": [
+      "Rust",
+      "Node Graph",
+      "TypeId",
+      "Documentation",
+      "Type Safety"
+    ],
+    "excerpt": "\r\n# Type Safety and Documentation in Rust Node Graph Systems\r\n\r\nNode graph systems are a popular way to visually represent logic, workflows, or data f...",
+    "readingTime": 4,
+    "fileName": "Node-Nonesense-1.md"
+  },
+  {
     "slug": "The-Ruby-Monolith-Mindset",
     "title": "The Ruby Monolith Mindset: When Familiarity Breeds Technical Debt",
     "date": "2024-10-27",
