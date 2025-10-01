@@ -324,6 +324,12 @@
     "fileName": "horizon-game-server-pt1.md"
   },
   {
+    "slug": "I-wont-linux",
+    "excerpt": "# I Won’t Switch to Linux\n\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded systems...",
+    "readingTime": 6,
+    "fileName": "I-wont-linux.md"
+  },
+  {
     "slug": "rise-of-tech-tribalism",
     "title": "The Rise of Tech Tribalism: When Tool Loyalty Trumps Pragmatism",
     "date": "2024-10-12",
