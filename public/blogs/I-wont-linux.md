@@ -1,3 +1,10 @@
+---
+title: "I Won’t Switch to Linux" 
+date: "2025-09-30"
+categories: ["Linux", "Workflows"]
+tags: ["Linux", "Workflows"]
+---
+
 # I Won’t Switch to Linux
 
 Every few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded systems? Of course. But as a daily workstation, especially for graphics-heavy, latency-sensitive workloads like game development, Linux remains fundamentally compromised. This isn’t due to ignorance — I work with Linux servers daily. It’s because, when evaluated honestly against macOS and Windows, the Linux desktop is fundamentally handicapped by its design decisions, ecosystem fragmentation, and a community culture that does not prioritize desktop performance and coherence.

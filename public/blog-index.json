@@ -1,5 +1,21 @@
 [
   {
+    "slug": "I-wont-linux",
+    "title": "I Won’t Switch to Linux",
+    "date": "2025-09-30",
+    "categories": [
+      "Linux",
+      "Workflows"
+    ],
+    "tags": [
+      "Linux",
+      "Workflows"
+    ],
+    "excerpt": "\n# I Won’t Switch to Linux\n\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded system...",
+    "readingTime": 6,
+    "fileName": "I-wont-linux.md"
+  },
+  {
     "slug": "Node-Nonesense-1",
     "title": "Type Safety and Documentation in Rust Node Graph Systems",
     "date": "2025-09-30",
@@ -322,12 +338,6 @@
     "excerpt": "\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's ...",
     "readingTime": 4,
     "fileName": "horizon-game-server-pt1.md"
-  },
-  {
-    "slug": "I-wont-linux",
-    "excerpt": "# I Won’t Switch to Linux\n\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded systems...",
-    "readingTime": 6,
-    "fileName": "I-wont-linux.md"
   },
   {
     "slug": "rise-of-tech-tribalism",
