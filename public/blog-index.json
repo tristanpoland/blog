@@ -1,5 +1,25 @@
 [
   {
+    "slug": "gpui-mouse-position",
+    "title": "The Great GPUI Mouse Coordinate Mystery (And How I Solved It)",
+    "date": "2025-10-3",
+    "categories": [
+      "Rust",
+      "GPUI",
+      "UI Frameworks",
+      "Coordinate Systems"
+    ],
+    "tags": [
+      "GPUI",
+      "Mouse Events",
+      "Coordinate Conversion",
+      "Rust UI"
+    ],
+    "excerpt": "\r\n*Or: How I spent 3 days debugging why my node graph thought I was clicking 250 pixels to the left of where my mouse actually was.*\r\n\r\n## The Scene o...",
+    "readingTime": 16,
+    "fileName": "gpui-mouse-position.md"
+  },
+  {
     "slug": "I-wont-linux",
     "title": "I Won’t Switch to Linux",
     "date": "2025-09-30",
@@ -11,8 +31,8 @@
       "Linux",
       "Workflows"
     ],
-    "excerpt": "\n# I Won’t Switch to Linux\n\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded system...",
-    "readingTime": 6,
+    "excerpt": "\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded systems? Of course. But as a dail...",
+    "readingTime": 5,
     "fileName": "I-wont-linux.md"
   },
   {
