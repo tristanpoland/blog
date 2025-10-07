@@ -1,5 +1,27 @@
 [
   {
+    "slug": "gpui-interactive",
+    "title": "Building Interactive UIs in GPUI: Actions, Context Menus, and Event Handling",
+    "date": "2025-10-07",
+    "categories": [
+      "Rust",
+      "GPUI",
+      "UI Frameworks",
+      "Coordinate Systems"
+    ],
+    "tags": [
+      "GPUI",
+      "Mouse Events",
+      "Coordinate Conversion",
+      "Rust UI",
+      "Actions",
+      "Context Menus"
+    ],
+    "excerpt": "\r\n\r\n# Building Interactive UIs in GPUI: A Deep Dive into Actions, Context Menus, and Event Handling\r\n\r\nWhen I first started working with GPUI (the UI ...",
+    "readingTime": 16,
+    "fileName": "gpui-interactive.md"
+  },
+  {
     "slug": "gpui-mouse-position",
     "title": "The Great GPUI Mouse Coordinate Mystery (And How I Solved It)",
     "date": "2025-10-3",
@@ -340,12 +362,6 @@
     "excerpt": "\r\nAs a software developer, I've long been fascinated by the intricacies of CI/CD systems. Recently, I embarked on an ambitious project: creating a Rus...",
     "readingTime": 3,
     "fileName": "CICD-reimagined.md"
-  },
-  {
-    "slug": "gpui-interactive",
-    "excerpt": "...",
-    "readingTime": 1,
-    "fileName": "gpui-interactive.md"
   },
   {
     "slug": "horizon-game-server-pt1",
