@@ -5,9 +5,6 @@ categories: [Rust, GPUI, "UI Frameworks", "Coordinate Systems"]
 tags: [GPUI, "Mouse Events", "Coordinate Conversion", "Rust UI", "Actions", "Context Menus"]
 ---
 
-
-# Building Interactive UIs in GPUI: A Deep Dive into Actions, Context Menus, and Event Handling
-
 When I first started working with GPUI (the UI framework powering Zed), I made every mistake in the book. I tried to handle actions in constructors, passed callbacks through closures that wouldn't compile, and spent hours debugging why my context menus would appear but never actually do anything. If you're reading this, you've probably been there too.
 
 GPUI is different from React, Flutter, or even immediate-mode UIs like egui. It's a retained-mode framework with a sophisticated action dispatch system that feels more like SwiftUI's environment and focus system than traditional event bubbling. Once you understand how it works, it's incredibly powerful. But getting there? That's the journey we're taking today.
