@@ -851,30 +851,6 @@ This viewport system opens doors to capabilities that would be difficult or impo
 
 ---
 
-## Key Takeaways
-
-Building this system taught me several lessons that extend beyond just this specific implementation:
-
-1. **Eliminate work rather than optimizing it.** The biggest performance wins came from removing unnecessary copies, not from making copies faster.
-
-2. **Design for independence.** Each subsystem performs better when it's not waiting for others or being throttled by coordination overhead.
-
-3. **Use the right tool for each job.** Atomic operations for simple shared state, event systems for complex UI interactions, direct polling for latency-critical input.
-
-4. **Platform-specific features have their place.** Cross-platform abstractions are valuable, but sometimes the most efficient solution leverages platform-specific capabilities like DXGI shared resources.
-
-5. **Measure everything.** We built performance tracking directly into the system. Without measurements, you're optimizing blind.
-
-The complete implementation weighs in at around 5,200 lines of Rust across multiple modules:
-- Input system: ~500 lines
-- Renderer core: ~2,500 lines
-- Viewport UI: ~1,900 lines  
-- DXGI bridge: ~250 lines
-
-The viewport system is now production-ready and forms the foundation for Pulsar's editor interface. It demonstrates that with careful architecture and willingness to work with lower-level graphics APIs, you can achieve performance that rivals commercial engines while maintaining the safety and ergonomics of Rust.
-
----
-
 ## Technical References and Further Reading
 
 For readers interested in diving deeper into the techniques described here:
