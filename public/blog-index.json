@@ -1,5 +1,26 @@
 [
   {
+    "slug": "gpui-viewport",
+    "title": "Building a Production-Grade 3D Viewport System: A Deep Dive into Zero-Copy GPU Rendering",
+    "date": "2025-10-25",
+    "categories": [
+      "Rust",
+      "GPUI",
+      "UI Frameworks",
+      "Rendering",
+      "Windows",
+      "DirectX"
+    ],
+    "tags": [
+      "GPUI",
+      "Mouse Events",
+      "Rust UI"
+    ],
+    "excerpt": "\r\n## Introduction\r\n\r\nThis research blog documents the implementation of a sophisticated, high-performance 3D viewport system for the Pulsar game engin...",
+    "readingTime": 16,
+    "fileName": "gpui-viewport.md"
+  },
+  {
     "slug": "gpui-interactive",
     "title": "Building Interactive UIs in GPUI: Actions, Context Menus, and Event Handling",
     "date": "2025-10-07",
@@ -17,7 +38,7 @@
       "Actions",
       "Context Menus"
     ],
-    "excerpt": "\r\n\r\n# Building Interactive UIs in GPUI: A Deep Dive into Actions, Context Menus, and Event Handling\r\n\r\nWhen I first started working with GPUI (the UI ...",
+    "excerpt": "\r\nWhen I first started working with GPUI (the UI framework powering Zed), I made every mistake in the book. I tried to handle actions in constructors,...",
     "readingTime": 16,
     "fileName": "gpui-interactive.md"
   },
