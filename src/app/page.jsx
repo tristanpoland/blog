@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import BlogPost from '../components/BlogPost';
 
+const basePath = process.env.NEXT_PUBLIC_CUSTOM_BASE_PATH || '';
+
 export default function Home() {
   // Read the blog index
   let blogPosts = [];
@@ -20,6 +22,15 @@ export default function Home() {
     <div>
       <div className="mb-12 text-center">
         <br></br><br></br>
+        <div className="flex justify-center mb-6">
+          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-300 dark:border-gray-700 shadow-lg">
+            <img
+              src={`${basePath}/images/pfp.png`}
+              alt="Profile Picture"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
         <h1 className="text-4xl font-bold mb-4"></h1>
         <p className="text-xl text-gray-600 dark:text-gray-400">
           Exploring web development, programming, and technology
