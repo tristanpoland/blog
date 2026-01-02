@@ -97,4 +97,4 @@ This isn't an attempt to convince anyone else to abandon Zig. If you're using it
 
 For me, though, the combination of instability, leadership concerns, and weaker memory safety compared to alternatives makes Zig not the right choice. I'm sharing this perspective in case others have similar concerns and want to know they're not alone in them.
 
-Maybe Zig will reach 1.0 and stabilize. Maybe the governance will mature. But I'm not investing more time waiting to find out, and I cartainly wont be supporting a project with an activly toxic leadership. That is not what open source stands for.
+Maybe Zig will reach 1.0 and stabilize. Maybe the governance will mature. But I'm not investing more time waiting to find out, and I certainly wont be supporting a project with an activly toxic leadership. That is not what open source stands for.
