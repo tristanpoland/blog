@@ -3,6 +3,7 @@ title: "Graphite and Pegasus; No privacy is not dead"
 date: "2025-9-5"
 categories: ["Security", "Privacy", "Device Protection", "Government Overreach"]
 tags: ["Encryption", "Surveillance", "Digital Rights", "Spyware"]
+cover: "somebodys-watchin-me-2.png"
 ---
 
 # Mobile Spyware Reality Check: What Pegasus and Graphite Actually Do (And Don't Do)

@@ -3,6 +3,7 @@ title: "Building Interactive UIs in GPUI: Actions, Context Menus, and Event Hand
 date: "2025-10-07"
 categories: [Rust, GPUI, "UI Frameworks", "Coordinate Systems"]
 tags: [GPUI, "Mouse Events", "Coordinate Conversion", "Rust UI", "Actions", "Context Menus"]
+cover: "gpui-interactive.png"
 ---
 
 When I first started working with GPUI (the UI framework powering Zed), I made every mistake in the book. I tried to handle actions in constructors, passed callbacks through closures that wouldn't compile, and spent hours debugging why my context menus would appear but never actually do anything. If you're reading this, you've probably been there too.

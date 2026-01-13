@@ -38,9 +38,11 @@ export default function Home() {
       </div>
 
       {blogPosts.length > 0 ? (
-        blogPosts.map((post) => (
-          <BlogPost key={post.slug} post={post} />
-        ))
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
+          {blogPosts.map((post) => (
+            <BlogPost key={post.slug} post={post} />
+          ))}
+        </div>
       ) : (
         <div className="text-center py-12">
           <p className="text-gray-600 dark:text-gray-400">

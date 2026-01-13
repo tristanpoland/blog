@@ -1,8 +1,9 @@
 ---
 title: "The SurrealDB Reality Check; Marketing vs Reality"
 date: "2025-6-23"
-categories: ["Database", "Performance", "Marketing"] 
+categories: ["Database", "Performance", "Marketing"]
 tags: ["Architecture"]
+cover: "SurrealDB.png"
 ---
 
 ## The SurrealDB Reality Check: When Marketing Meets Performance

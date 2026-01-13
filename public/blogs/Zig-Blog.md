@@ -3,6 +3,7 @@ title: "Why I'm Stepping Away from Zig and Its Foundation"
 date: "2026-1-2"
 categories: [Rust, Zig, Codeberg]
 tags: ["Nerd Drama"]
+cover: "Zig-Blog.png"
 ---
 
 I've decided to step back from the Zig programming language and its community. This isn't a knee-jerk reaction to one incident, but rather the result of observing several concerning patterns over the past year—patterns that suggest this project isn't aligned with what I need from a systems programming language.

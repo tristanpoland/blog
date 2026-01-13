@@ -1,8 +1,9 @@
 ---
 title: "Buzzword Koolaid: What even is 'The Edge'?"
 date: "2025-7-11"
-categories: ["DevOps", "Performance", "Networking"] 
+categories: ["DevOps", "Performance", "Networking"]
 tags: ["Architecture","DevOps", "Performance", "Networking"]
+cover: "Buzzwords-The-Edge.png"
 ---
 
 # Edge Computing: Beyond the Buzzword Fog

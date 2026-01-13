@@ -1,7 +1,7 @@
 ---
 title: "The Rise of Tech Tribalism: When Tool Loyalty Trumps Pragmatism"
 date: "2024-10-12"
-categories: ["Programing", "Performance"] 
+categories: ["Programing", "Performance"]
 tags: ["Architecture"]
 ---
 

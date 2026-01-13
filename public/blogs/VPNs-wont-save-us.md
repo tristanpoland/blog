@@ -1,8 +1,9 @@
 ---
 title: "VPNs: When will they save us, and when won't they?"
 date: "2024-12-24"
-categories: ["Security"] 
+categories: ["Security"]
 tags: ["VPNs"]
+cover: "VPNs-wont-save-us.png"
 ---
 
 # Addressing the issue

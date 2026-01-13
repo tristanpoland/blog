@@ -3,6 +3,7 @@ title: "Which Desktop OS Is Actually the Most Secure?"
 date: "2025-8-9"
 categories: ["Computers", "Operating Systems", "Security"]
 tags: ["Computers", "Operating Systems", "Security"]
+cover: "OS-Security-Showdown.png"
 ---
 
 ## The TL;DR

@@ -1,8 +1,9 @@
 ---
-title: "Type Safety and Documentation in Rust Node Graph Systems" 
+title: "Type Safety and Documentation in Rust Node Graph Systems"
 date: "2025-09-30"
 categories: ["Engineering", "Rust", "Architecture"]
 tags: ["Rust", "Node Graph", "TypeId", "Documentation", "Type Safety"]
+cover: "Node-Nonsense-1.png"
 ---
 
 # Type Safety and Documentation in Rust Node Graph Systems

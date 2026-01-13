@@ -3,6 +3,7 @@ title: "TPM 2.0: Separating Security Facts from Fiction"
 date: "2025-8-10"
 categories: ["Computers", "Operating Systems", "Security"]
 tags: ["Computers", "Operating Systems", "Security"]
+cover: "TPM-Modules.png"
 ---
 
 # The basics

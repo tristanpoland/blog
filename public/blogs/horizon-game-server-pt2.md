@@ -1,8 +1,9 @@
 ---
 title: "Horizon: The game server built for performance at scale"
 date: "2025-06-24"
-categories: ["Engineering", "Multiplayer", "Gaming", "Rust"] 
+categories: ["Engineering", "Multiplayer", "Gaming", "Rust"]
 tags: ["GameDev", "Rust", "MMO", "Networking", "Unreal Engine", "Stars Beyond", "Server Meshing", "Performance"]
+cover: "horizon-game-server-pt2.png"
 ---
 
 *The technical journey of building a game server that breaks Unreal Engine's limits and powers massive space battles*

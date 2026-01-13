@@ -3,6 +3,7 @@ title: "My Journey with the Legion Slim 7 16IRH8: A Rust, Unreal Engine, and Web
 date: "2025-04-10"
 categories: ["Technology", "Development", "Hardware Review"]
 tags: ["Legion Slim 7", "Rust Development", "Unreal Engine", "Web Development", "WSL", "Dev Containers"]
+cover: "Lenovo-Legion-Slim-7.png"
 ---
 
 ## Introduction

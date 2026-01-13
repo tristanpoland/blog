@@ -4,6 +4,8 @@ import { formatDate } from '../../../utils/date-formatter';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+const basePath = process.env.NEXT_PUBLIC_CUSTOM_BASE_PATH || '';
+
 // This function gets called at build time to generate static paths
 export async function generateStaticParams() {
   try {
@@ -66,18 +68,28 @@ export default async function BlogPage({ params }) {
           <Link href="/" className="text-blue-600 dark:text-blue-400 hover:underline mb-8 inline-block">
             ← Back to Home
           </Link>
-          <h1 className="text-4xl font-bold mt-4 mb-2">{blog.title}</h1>
-          
+          <h1 className="text-4xl font-bold mt-4 mb-4">{blog.title}</h1>
+
+          {blog.cover && (
+            <div className="relative w-full h-64 md:h-96 mb-6 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+              <img
+                src={`${basePath}/blogs/covers/${blog.cover}`}
+                alt={blog.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
+
           <div className="flex items-center text-gray-600 dark:text-gray-400 mb-4">
             <span className="mr-4">{formatDate(blog.date)}</span>
             <span>{readingTime} min read</span>
           </div>
-          
+
           {blog.tags && blog.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-8">
               {blog.tags.map(tag => (
-                <Link 
-                  key={tag} 
+                <Link
+                  key={tag}
                   href={`/tags/${tag}`}
                   className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm"
                 >

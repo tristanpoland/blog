@@ -1,8 +1,9 @@
 ---
 title: "The Story Behind Apple's 'Illusion of Thinking'"
 date: "2025-6-18"
-categories: ["Programing", "Performance", "LLMs"] 
+categories: ["Programing", "Performance", "LLMs"]
 tags: ["Architecture"]
+cover: "Apple-AI-Paper.png"
 ---
 
 ## The Story Behind Apple's "Illusion of Thinking"

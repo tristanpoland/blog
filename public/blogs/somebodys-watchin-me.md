@@ -3,6 +3,7 @@ title: "Somebody's Watchin' Me: Privacy Under Gov't Surveillance"
 date: "2025-07-31"
 categories: ["Security", "Privacy", "Device Protection", "Government Overreach"]
 tags: ["Encryption", "Surveillance", "Digital Rights"]
+cover: "somebodys-watchin-me.png"
 ---
 
 *Published July 31, 2025*

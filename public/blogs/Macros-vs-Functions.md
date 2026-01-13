@@ -1,8 +1,9 @@
 ---
 title: "Macros VS Functions, and When to Apply Them"
 date: "2024-10-26"
-categories: ["Programing", "Performance"] 
+categories: ["Programing", "Performance"]
 tags: ["Architecture"]
+cover: "Macros-vs-Functions.png"
 ---
 
 # Macros VS Functions, and When to Apply Them

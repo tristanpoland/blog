@@ -3,6 +3,7 @@ title: "Building a Production-Grade 3D Viewport: Zero-Copy Rendering Between Bev
 date: "2025-10-25"
 categories: [Rust, GPUI, "UI Frameworks", "Rendering", "Windows", "DirectX"]
 tags: [GPUI, "GPU Architecture", "Rust UI", "Lock-Free Programming"]
+cover: "gpui-viewport.png"
 ---
 
 ## Introduction

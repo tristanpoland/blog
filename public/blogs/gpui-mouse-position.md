@@ -3,6 +3,7 @@ title: "The Great GPUI Mouse Coordinate Mystery (And How I Solved It)"
 date: "2025-10-3"
 categories: [Rust, GPUI, "UI Frameworks", "Coordinate Systems"]
 tags: [GPUI, "Mouse Events", "Coordinate Conversion", "Rust UI"]
+cover: "gpui-mouse-position.png"
 ---
 
 *Or: How I spent 3 days debugging why my node graph thought I was clicking 250 pixels to the left of where my mouse actually was.*

@@ -1,7 +1,7 @@
 ---
 title: "Reimagining CI/CD: My Journey Building a Rust-Based System for pipelines"
 date: "2024-10-12"
-categories: ["Engineering", "CI", "Rust"] 
+categories: ["Engineering", "CI", "Rust"]
 tags: ["Automation"]
 ---
 
