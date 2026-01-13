@@ -401,7 +401,7 @@
     "tags": [
       "Architecture"
     ],
-    "cover": "Demystifying-Casting.jpg",
+    "cover": "Demystifying-Casting.png",
     "excerpt": "\nIn the world of Unreal Engine 5 game development (particularly in Blueprint), there's a persistent myth that casting is inherently bad for performanc...",
     "readingTime": 5,
     "fileName": "Demystifying-Casting.md"
