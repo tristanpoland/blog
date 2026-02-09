@@ -18,7 +18,7 @@ const customSchema = {
     ...defaultSchema.attributes,
     div: [
       ...(defaultSchema.attributes?.div || []),
-      ['className', 'mermaid'], // Allow mermaid class
+      ['className', 'mermaid', 'side-by-side-images'], // Allow mermaid and side-by-side-images classes
     ],
   },
 };

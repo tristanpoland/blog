@@ -3,11 +3,16 @@ title: "The $7.6 Million DM: Anatomy of a Modern Crypto Inheritance Scam"
 date: "2026-2-8"
 categories: ["Finance", "Scam"] 
 tags: ["Scam"]
+cover: "crypto-scam-1.jpg"
 ---
 
 It starts with a message that feels strangely intimate.
 
-
+<div class="side-by-side-images">
+  <img src="/blog/blogs/covers/crypto-scam-1(msg_screenshot).jpg" alt="Message screenshot" />
+  <img src="/blog/blogs/covers/crypto-scam-1.jpg" alt="Crypto scam image" />
+  <img src="/blog/blogs/covers/crypto-scam-1(transfer_screenshot).jpg" alt= "Transfer Screen">
+</div>
 
 Attached to the emotional confession are login credentials and a promise: **7,661,952 USDT** waiting on a crypto exchange you’ve never heard of. A fortune. Just sitting there. Yours.
 
