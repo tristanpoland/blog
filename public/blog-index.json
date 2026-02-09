@@ -1,5 +1,20 @@
 [
   {
+    "slug": "crypto-scam-1",
+    "title": "The $7.6 Million DM: Anatomy of a Modern Crypto Inheritance Scam",
+    "date": "2026-2-8",
+    "categories": [
+      "Finance",
+      "Scam"
+    ],
+    "tags": [
+      "Scam"
+    ],
+    "excerpt": "\r\nIt starts with a message that feels strangely intimate.\r\n\r\n> “For many years, I have carried the weight of work and lived in solitude… I have left y...",
+    "readingTime": 5,
+    "fileName": "crypto-scam-1.md"
+  },
+  {
     "slug": "Zig-Blog",
     "title": "Why I'm Stepping Away from Zig and Its Foundation",
     "date": "2026-1-2",
@@ -35,7 +50,7 @@
       "Lock-Free Programming"
     ],
     "cover": "gpui-viewport.png",
-    "excerpt": "\n## Introduction\n\nFor the past several months, I've been deep in the trenches building a professional-grade 3D viewport system for the Pulsar game eng...",
+    "excerpt": "\r\n## Introduction\r\n\r\nFor the past several months, I've been deep in the trenches building a professional-grade 3D viewport system for the Pulsar game ...",
     "readingTime": 28,
     "fileName": "gpui-viewport.md"
   },
@@ -58,7 +73,7 @@
       "Context Menus"
     ],
     "cover": "gpui-interactive.png",
-    "excerpt": "\nWhen I first started working with GPUI (the UI framework powering Zed), I made every mistake in the book. I tried to handle actions in constructors, ...",
+    "excerpt": "\r\nWhen I first started working with GPUI (the UI framework powering Zed), I made every mistake in the book. I tried to handle actions in constructors,...",
     "readingTime": 16,
     "fileName": "gpui-interactive.md"
   },
@@ -96,7 +111,7 @@
       "Workflows"
     ],
     "cover": "I-wont-linux.png",
-    "excerpt": "\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded systems? Of course. But as a dail...",
+    "excerpt": "\r\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded systems? Of course. But as a dai...",
     "readingTime": 5,
     "fileName": "I-wont-linux.md"
   },
@@ -157,7 +172,7 @@
       "Security"
     ],
     "cover": "TPM-Modules.png",
-    "excerpt": "\n# The basics\n\nThe Trusted Platform Module (TPM) 2.0 has become one of cybersecurity's most polarizing technologies, generating fierce debate between ...",
+    "excerpt": "\r\n# The basics\r\n\r\nThe Trusted Platform Module (TPM) 2.0 has become one of cybersecurity's most polarizing technologies, generating fierce debate betwe...",
     "readingTime": 10,
     "fileName": "TPM-Modules.md"
   },
@@ -176,7 +191,7 @@
       "Security"
     ],
     "cover": "OS-Security-Showdown.png",
-    "excerpt": "\n## The TL;DR\n\n* **Short answer:** For **typical desktop users** running stock operating systems without additional security software, **Windows 11** ...",
+    "excerpt": "\r\n## The TL;DR\r\n\r\n* **Short answer:** For **typical desktop users** running stock operating systems without additional security software, **Windows 11...",
     "readingTime": 16,
     "fileName": "OS-Security-Showdown.md"
   },
@@ -295,7 +310,7 @@
       "Architecture"
     ],
     "cover": "Apple-AI-Paper.png",
-    "excerpt": "\n## The Story Behind Apple's \"Illusion of Thinking\"\n\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and Lim...",
+    "excerpt": "\r\n## The Story Behind Apple's \"Illusion of Thinking\"\r\n\r\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and ...",
     "readingTime": 14,
     "fileName": "Apple-AI-Paper.md"
   },
@@ -337,7 +352,7 @@
       "Dev Containers"
     ],
     "cover": "Lenovo-Legion-Slim-7.png",
-    "excerpt": "\n## Introduction\n\nBack in January 2024, I finally bit the bullet and grabbed a Lenovo Legion Slim 7 16IRH8. It showed up about a week later, and I've ...",
+    "excerpt": "\r\n## Introduction\r\n\r\nBack in January 2024, I finally bit the bullet and grabbed a Lenovo Legion Slim 7 16IRH8. It showed up about a week later, and I'...",
     "readingTime": 8,
     "fileName": "Lenovo-Legion-Slim-7.md"
   },
@@ -352,7 +367,7 @@
       "VPNs"
     ],
     "cover": "VPNs-wont-save-us.png",
-    "excerpt": "\n# Addressing the issue\n\nWe have all seen segments on YouTube and platforms like it advertising that you are \"safer\" online when using a VPN. This can...",
+    "excerpt": "\r\n# Addressing the issue\r\n\r\nWe have all seen segments on YouTube and platforms like it advertising that you are \"safer\" online when using a VPN. This ...",
     "readingTime": 5,
     "fileName": "VPNs-wont-save-us.md"
   },
@@ -370,7 +385,7 @@
       "Architecture"
     ],
     "cover": "The-Ruby-Monolith-Mindset.png",
-    "excerpt": "\n# The Ruby Monolith Mindset: When Familiarity Breeds Technical Debt\n\nIn the ever-evolving landscape of software development, certain patterns emerge ...",
+    "excerpt": "\r\n# The Ruby Monolith Mindset: When Familiarity Breeds Technical Debt\r\n\r\nIn the ever-evolving landscape of software development, certain patterns emer...",
     "readingTime": 8,
     "fileName": "The-Ruby-Monolith-Mindset.md"
   },
@@ -386,7 +401,7 @@
       "Architecture"
     ],
     "cover": "Macros-vs-Functions.png",
-    "excerpt": "\n# Macros VS Functions, and When to Apply Them\n\nRecently I came across a group of individuals that seemed convinced that macros were terrible and alwa...",
+    "excerpt": "\r\n# Macros VS Functions, and When to Apply Them\r\n\r\nRecently I came across a group of individuals that seemed convinced that macros were terrible and a...",
     "readingTime": 9,
     "fileName": "Macros-vs-Functions.md"
   },
@@ -402,7 +417,7 @@
       "Architecture"
     ],
     "cover": "Demystifying-Casting.png",
-    "excerpt": "\nIn the world of Unreal Engine 5 game development (particularly in Blueprint), there's a persistent myth that casting is inherently bad for performanc...",
+    "excerpt": "\r\nIn the world of Unreal Engine 5 game development (particularly in Blueprint), there's a persistent myth that casting is inherently bad for performan...",
     "readingTime": 5,
     "fileName": "Demystifying-Casting.md"
   },
@@ -418,7 +433,7 @@
     "tags": [
       "Automation"
     ],
-    "excerpt": "\nAs a software developer, I've long been fascinated by the intricacies of CI/CD systems. Recently, I embarked on an ambitious project: creating a Rust...",
+    "excerpt": "\r\nAs a software developer, I've long been fascinated by the intricacies of CI/CD systems. Recently, I embarked on an ambitious project: creating a Rus...",
     "readingTime": 3,
     "fileName": "CICD-reimagined.md"
   },
@@ -437,7 +452,7 @@
       "Distributed Computing"
     ],
     "cover": "horizon-game-server-pt1.png",
-    "excerpt": "\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's ...",
+    "excerpt": "\r\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's...",
     "readingTime": 4,
     "fileName": "horizon-game-server-pt1.md"
   },
@@ -452,7 +467,7 @@
     "tags": [
       "Architecture"
     ],
-    "excerpt": "\n## A brief introduction to the problem\n\nIn recent years, a concerning trend has emerged in the tech world: the rise of what we might call \"tech triba...",
+    "excerpt": "\r\n## A brief introduction to the problem\r\n\r\nIn recent years, a concerning trend has emerged in the tech world: the rise of what we might call \"tech tr...",
     "readingTime": 9,
     "fileName": "rise-of-tech-tribalism.md"
   }
