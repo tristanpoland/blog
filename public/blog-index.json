@@ -458,6 +458,25 @@
     "fileName": "horizon-game-server-pt1.md"
   },
   {
+    "slug": "id-verification",
+    "title": "Don't Blame Discord - Blame Your Legislature: ID Verification",
+    "date": "2026-20-2",
+    "categories": [
+      "Security",
+      "Privacy",
+      "Law"
+    ],
+    "tags": [
+      "Security",
+      "Privacy",
+      "Law"
+    ],
+    "cover": "id-verification.png",
+    "excerpt": "\r\n## A Firestorm Aimed at the Wrong Target\r\n\r\nThe internet has been in an uproar. Discord's announcement that it would begin rolling out global age ve...",
+    "readingTime": 27,
+    "fileName": "id-verification.md"
+  },
+  {
     "slug": "rise-of-tech-tribalism",
     "title": "The Rise of Tech Tribalism: When Tool Loyalty Trumps Pragmatism",
     "date": "2024-10-12",
