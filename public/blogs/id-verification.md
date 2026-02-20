@@ -1,6 +1,6 @@
 ---
 title: "Don't Blame Discord - Blame Your Legislature: ID Verification"
-date: "2026-20-2"
+date: "2026-2-20"
 categories: ["Security", "Privacy", "Law"]
 tags: ["Security", "Privacy", "Law"]
 cover: "id-verification.png"

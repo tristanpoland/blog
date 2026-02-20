@@ -1,5 +1,24 @@
 [
   {
+    "slug": "id-verification",
+    "title": "Don't Blame Discord - Blame Your Legislature: ID Verification",
+    "date": "2026-2-20",
+    "categories": [
+      "Security",
+      "Privacy",
+      "Law"
+    ],
+    "tags": [
+      "Security",
+      "Privacy",
+      "Law"
+    ],
+    "cover": "id-verification.png",
+    "excerpt": "\n## A Firestorm Aimed at the Wrong Target\n\nThe internet has been in an uproar. Discord's announcement that it would begin rolling out global age verif...",
+    "readingTime": 27,
+    "fileName": "id-verification.md"
+  },
+  {
     "slug": "crypto-scam-1",
     "title": "The $7.6 Million DM: Anatomy of a Modern Crypto Inheritance Scam",
     "date": "2026-2-8",
@@ -11,7 +30,7 @@
       "Scam"
     ],
     "cover": "crypto-scam-1.jpg",
-    "excerpt": "\r\nIt starts with a message that feels strangely intimate.\r\n\r\n<div style=\"display: flex; gap: 10px; flex-wrap: wrap;\">\r\n  <img src=\"/blog/blogs/covers/...",
+    "excerpt": "\nIt starts with a message that feels strangely intimate.\n\n<div class=\"side-by-side-images\">\n  <img src=\"/blog/blogs/covers/crypto-scam-1(msg_screensho...",
     "readingTime": 5,
     "fileName": "crypto-scam-1.md"
   },
@@ -51,7 +70,7 @@
       "Lock-Free Programming"
     ],
     "cover": "gpui-viewport.png",
-    "excerpt": "\r\n## Introduction\r\n\r\nFor the past several months, I've been deep in the trenches building a professional-grade 3D viewport system for the Pulsar game ...",
+    "excerpt": "\n## Introduction\n\nFor the past several months, I've been deep in the trenches building a professional-grade 3D viewport system for the Pulsar game eng...",
     "readingTime": 28,
     "fileName": "gpui-viewport.md"
   },
@@ -74,7 +93,7 @@
       "Context Menus"
     ],
     "cover": "gpui-interactive.png",
-    "excerpt": "\r\nWhen I first started working with GPUI (the UI framework powering Zed), I made every mistake in the book. I tried to handle actions in constructors,...",
+    "excerpt": "\nWhen I first started working with GPUI (the UI framework powering Zed), I made every mistake in the book. I tried to handle actions in constructors, ...",
     "readingTime": 16,
     "fileName": "gpui-interactive.md"
   },
@@ -112,7 +131,7 @@
       "Workflows"
     ],
     "cover": "I-wont-linux.png",
-    "excerpt": "\r\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded systems? Of course. But as a dai...",
+    "excerpt": "\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded systems? Of course. But as a dail...",
     "readingTime": 5,
     "fileName": "I-wont-linux.md"
   },
@@ -173,7 +192,7 @@
       "Security"
     ],
     "cover": "TPM-Modules.png",
-    "excerpt": "\r\n# The basics\r\n\r\nThe Trusted Platform Module (TPM) 2.0 has become one of cybersecurity's most polarizing technologies, generating fierce debate betwe...",
+    "excerpt": "\n# The basics\n\nThe Trusted Platform Module (TPM) 2.0 has become one of cybersecurity's most polarizing technologies, generating fierce debate between ...",
     "readingTime": 10,
     "fileName": "TPM-Modules.md"
   },
@@ -192,7 +211,7 @@
       "Security"
     ],
     "cover": "OS-Security-Showdown.png",
-    "excerpt": "\r\n## The TL;DR\r\n\r\n* **Short answer:** For **typical desktop users** running stock operating systems without additional security software, **Windows 11...",
+    "excerpt": "\n## The TL;DR\n\n* **Short answer:** For **typical desktop users** running stock operating systems without additional security software, **Windows 11** ...",
     "readingTime": 16,
     "fileName": "OS-Security-Showdown.md"
   },
@@ -311,7 +330,7 @@
       "Architecture"
     ],
     "cover": "Apple-AI-Paper.png",
-    "excerpt": "\r\n## The Story Behind Apple's \"Illusion of Thinking\"\r\n\r\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and ...",
+    "excerpt": "\n## The Story Behind Apple's \"Illusion of Thinking\"\n\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and Lim...",
     "readingTime": 14,
     "fileName": "Apple-AI-Paper.md"
   },
@@ -353,7 +372,7 @@
       "Dev Containers"
     ],
     "cover": "Lenovo-Legion-Slim-7.png",
-    "excerpt": "\r\n## Introduction\r\n\r\nBack in January 2024, I finally bit the bullet and grabbed a Lenovo Legion Slim 7 16IRH8. It showed up about a week later, and I'...",
+    "excerpt": "\n## Introduction\n\nBack in January 2024, I finally bit the bullet and grabbed a Lenovo Legion Slim 7 16IRH8. It showed up about a week later, and I've ...",
     "readingTime": 8,
     "fileName": "Lenovo-Legion-Slim-7.md"
   },
@@ -368,7 +387,7 @@
       "VPNs"
     ],
     "cover": "VPNs-wont-save-us.png",
-    "excerpt": "\r\n# Addressing the issue\r\n\r\nWe have all seen segments on YouTube and platforms like it advertising that you are \"safer\" online when using a VPN. This ...",
+    "excerpt": "\n# Addressing the issue\n\nWe have all seen segments on YouTube and platforms like it advertising that you are \"safer\" online when using a VPN. This can...",
     "readingTime": 5,
     "fileName": "VPNs-wont-save-us.md"
   },
@@ -386,7 +405,7 @@
       "Architecture"
     ],
     "cover": "The-Ruby-Monolith-Mindset.png",
-    "excerpt": "\r\n# The Ruby Monolith Mindset: When Familiarity Breeds Technical Debt\r\n\r\nIn the ever-evolving landscape of software development, certain patterns emer...",
+    "excerpt": "\n# The Ruby Monolith Mindset: When Familiarity Breeds Technical Debt\n\nIn the ever-evolving landscape of software development, certain patterns emerge ...",
     "readingTime": 8,
     "fileName": "The-Ruby-Monolith-Mindset.md"
   },
@@ -402,7 +421,7 @@
       "Architecture"
     ],
     "cover": "Macros-vs-Functions.png",
-    "excerpt": "\r\n# Macros VS Functions, and When to Apply Them\r\n\r\nRecently I came across a group of individuals that seemed convinced that macros were terrible and a...",
+    "excerpt": "\n# Macros VS Functions, and When to Apply Them\n\nRecently I came across a group of individuals that seemed convinced that macros were terrible and alwa...",
     "readingTime": 9,
     "fileName": "Macros-vs-Functions.md"
   },
@@ -418,7 +437,7 @@
       "Architecture"
     ],
     "cover": "Demystifying-Casting.png",
-    "excerpt": "\r\nIn the world of Unreal Engine 5 game development (particularly in Blueprint), there's a persistent myth that casting is inherently bad for performan...",
+    "excerpt": "\nIn the world of Unreal Engine 5 game development (particularly in Blueprint), there's a persistent myth that casting is inherently bad for performanc...",
     "readingTime": 5,
     "fileName": "Demystifying-Casting.md"
   },
@@ -434,7 +453,7 @@
     "tags": [
       "Automation"
     ],
-    "excerpt": "\r\nAs a software developer, I've long been fascinated by the intricacies of CI/CD systems. Recently, I embarked on an ambitious project: creating a Rus...",
+    "excerpt": "\nAs a software developer, I've long been fascinated by the intricacies of CI/CD systems. Recently, I embarked on an ambitious project: creating a Rust...",
     "readingTime": 3,
     "fileName": "CICD-reimagined.md"
   },
@@ -453,28 +472,9 @@
       "Distributed Computing"
     ],
     "cover": "horizon-game-server-pt1.png",
-    "excerpt": "\r\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's...",
+    "excerpt": "\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's ...",
     "readingTime": 4,
     "fileName": "horizon-game-server-pt1.md"
-  },
-  {
-    "slug": "id-verification",
-    "title": "Don't Blame Discord - Blame Your Legislature: ID Verification",
-    "date": "2026-20-2",
-    "categories": [
-      "Security",
-      "Privacy",
-      "Law"
-    ],
-    "tags": [
-      "Security",
-      "Privacy",
-      "Law"
-    ],
-    "cover": "id-verification.png",
-    "excerpt": "\r\n## A Firestorm Aimed at the Wrong Target\r\n\r\nThe internet has been in an uproar. Discord's announcement that it would begin rolling out global age ve...",
-    "readingTime": 27,
-    "fileName": "id-verification.md"
   },
   {
     "slug": "rise-of-tech-tribalism",
@@ -487,7 +487,7 @@
     "tags": [
       "Architecture"
     ],
-    "excerpt": "\r\n## A brief introduction to the problem\r\n\r\nIn recent years, a concerning trend has emerged in the tech world: the rise of what we might call \"tech tr...",
+    "excerpt": "\n## A brief introduction to the problem\n\nIn recent years, a concerning trend has emerged in the tech world: the rise of what we might call \"tech triba...",
     "readingTime": 9,
     "fileName": "rise-of-tech-tribalism.md"
   }
