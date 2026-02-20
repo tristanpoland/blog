@@ -16,8 +16,6 @@ This piece is about what's actually happening: who is really driving the age ver
 
 Understanding this requires understanding the true scale of what has happened to internet law in the past two years - and it is genuinely staggering.
 
----
-
 ## The Legislative Avalanche - What Has Actually Happened to the Law
 
 To understand why platforms are scrambling, you need to understand what the regulatory landscape looked like five years ago versus today. For most of the internet's commercial life, the primary federal law governing children online was the Children's Online Privacy Protection Act, or COPPA, enacted in 1998. COPPA was designed for a different era - one before Facebook, before YouTube, before smartphones, before the concept of a platform that a billion people used simultaneously. It covered children under 13. That was essentially it. Beyond that, the internet was largely self-regulated, with platforms writing their own terms of service and setting their own community standards.
@@ -33,8 +31,6 @@ The Supreme Court decision that turbocharged all of this came in June 2025. In *
 The contradictions are not abstract. They are specific, deep, and practically maddening. Different states define "harmful content" differently - some definitions are so broad they could plausibly capture depictions of same-sex couples. Utah's App Store Accountability Act, Texas's App Store Accountability Act, and Louisiana's equivalent all passed in 2025 and impose obligations on app stores and developers, but [each defines "app store" and "app" differently](https://www.cslawreport.com/print_issue.thtml?uri=cyber-security-law-report/content/vol-11/no-32-aug-13-2025), meaning the same piece of software may be covered in one state but not another under the same category of law. Age thresholds differ - some laws set the cutoff at 13, others at 16, others at 18. Some require verification only for specific content types; others require it for all access, period. Virginia's law limits minors to one hour of social media per day. Utah restricts use between 10:30 PM and 6:30 AM. Some states require parental consent systems. Others require platforms to retain age-verification records. Others - directly contradicting the first group - prohibit retaining that same data. Some are enjoined while their appeals proceed. Others are in effect but being challenged. New York's SAFE for Kids Act rules are still being finalized through a rulemaking process whose deadline keeps shifting, with the actual implementation date set [at 180 days after the rules are finally published](https://www.insideprivacy.com/childrens-privacy/end-of-year-2025-state-and-federal-developments-in-minors-privacy/) - which means nobody knows when it will actually take effect. California enacted the Digital Age Assurance Act in October 2025, which applies to *operating system providers* rather than app stores, creating yet another compliance category [taking effect January 1, 2027](https://www.insideprivacy.com/childrens-privacy/end-of-year-2025-state-and-federal-developments-in-minors-privacy/).
 
 This is not a problem that a compliance team can track in a spreadsheet. It is a moving, mutating, jurisdiction-by-jurisdiction legal labyrinth that is being actively modified in real time by legislatures, courts, and regulatory bodies simultaneously.
-
----
 
 ## The Impossibility of Granular Compliance - Why No Team Is Big Enough
 
@@ -54,8 +50,6 @@ This is the structural logic that makes a global, indiscriminate rollout like Di
 
 The brutal irony, as the [EFF has noted repeatedly](https://www.eff.org/deeplinks/2025/09/age-verification-windfall-big-tech-and-death-sentence-smaller-platforms), is that this dynamic disproportionately entrenches the platforms lawmakers claim to be targeting. Google and Meta have the resources to build sophisticated compliance infrastructure and absorb the costs. Discord can stretch to do it. Bluesky, Dreamwidth, and every other smaller, more innovative, often more privacy-respecting platform cannot - so they get crushed, blocked, or shuttered, while Big Tech grows stronger. The age verification laws, sold as a check on tech giants' power over children, are functionally a moat protecting those same tech giants from competition.
 
----
-
 ## Platforms Said All of This - Out Loud, Repeatedly, Before Complying
 
 One of the most aggravating aspects of watching users direct their rage at Discord is the historical erasure it represents. Because the platforms did not stay silent about any of this. They said it. Loudly. Publicly. In official statements, blog posts, congressional testimony, and regulatory filings. The companies told you these laws were broken before they implemented them. Then the laws went into effect anyway, and now the platforms are blamed for what the laws forced them to do.
@@ -69,8 +63,6 @@ Mastodon's founder Eugen Rochko was more blunt. He told the press plainly that [
 Apple's CEO personally called the Governor of Texas to [argue against the App Store Accountability Act](https://www.cslawreport.com/print_issue.thtml?uri=cyber-security-law-report/content/vol-11/no-32-aug-13-2025) - and lost. The law passed anyway. Google lobbied hard against the same category of laws and [similarly failed](https://www.cslawreport.com/print_issue.thtml?uri=cyber-security-law-report/content/vol-11/no-32-aug-13-2025). The Software & Information Industry Association submitted congressional testimony warning that "age verification requires robust data collection, making it exceedingly difficult to minimize the sensitive data collected from youth users" and that "websites or platforms holding a rich array of sensitive data are more attractive targets for malicious actors, dramatically increasing the likelihood that a data breach will harm young people." That's not an EFF press release. That's [industry testimony](https://www.route-fifty.com/digital-government/2025/12/state-social-media-laws-run-familiar-challenges/409997/) warning lawmakers exactly what would happen if they passed these laws. The laws passed anyway.
 
 Fight for the Future, a nonprofit digital rights organization, [framed it plainly](https://www.route-fifty.com/digital-government/2025/12/state-social-media-laws-run-familiar-challenges/409997/): "Lawmakers and tech companies are acting like online ID checks fencing off the internet are the only way forward, when in actuality, this is just another misstep in the current arc of censorship and surveillance on the internet." That quote is from a campaigner criticizing both lawmakers and platforms - but notably, not defending the status quo that led to age verification mandates, and recognizing that the platforms themselves were not the primary authors of this outcome.
-
----
 
 ## The Data Breach Problem - Why the Rushed Systems Are Already Failing
 
@@ -86,8 +78,6 @@ Now, in direct response to this breach, Discord launched a new global verificati
 
 This is perhaps the most damning indictment of the rushed compliance timeline. Had governments allowed platforms meaningful time to develop privacy-preserving age assurance alternatives - approaches that can verify a user's age range without storing the underlying identity documents - the breach landscape might look very different. Instead, platforms implementing compliance systems rapidly, under tight legal deadlines, under the threat of massive fines, with ambiguous technical requirements, are inevitably going to implement them imperfectly. The speed demanded by law does not allow for the security rigor that the data being collected demands.
 
----
-
 ## The Fediverse and Self-Hosted Platforms - A Closing Door, Not an Open Window
 
 Many users have responded to Discord's announcement by pointing toward decentralized alternatives - Mastodon, Matrix, Lemmy, self-hosted instances of various platforms - as a principled escape hatch. And it's true that for now, many self-hosted and federated platforms exist in a kind of regulatory shadow where enforcement has been limited. But the evidence is strongly accumulating that this window is closing, and anyone treating it as a permanent solution is underestimating the momentum of the regulatory apparatus being built.
@@ -102,8 +92,6 @@ For individual self-hosted operators, the more near-term risk may not be direct 
 
 The honest assessment is this: self-hosted and federated platforms represent meaningful tools for communities that are technically sophisticated and operate in jurisdictions with weaker enforcement. They are not a solution to the underlying legal and political problem. As a community in [Lemmy put it](https://lemmy.ml/post/43290621): the regulatory regimes will succeed at slipping these oppressive laws through in part because people who should be fighting the laws are instead retreating to technical workarounds and leaving the political fight to others.
 
----
-
 ## The Consolidation Effect - How These Laws Help the Platforms Users Hate
 
 There is one more layer to this story that deserves sustained attention, because it is deeply counterintuitive but well-documented: the age verification laws that users often see as Big Tech capitulating to government pressure are, in practice, enormously beneficial to the largest platforms at the expense of everyone else.
@@ -113,8 +101,6 @@ Consider the mechanics. A law that requires every social platform to build age v
 This is not speculation - it's exactly what happened in the UK when the Online Safety Act began to bite in 2025. Large platforms like Reddit, YouTube, and Spotify [implemented compliance measures](https://www.eff.org/deeplinks/2025/09/age-verification-windfall-big-tech-and-death-sentence-smaller-platforms), however clumsily. Forums on parenting, green living, gaming on Linux, and pet care were forced to shut down their community boards because the compliance cost was beyond them. The Hamster Forum closed. Niche communities that served real people in ways that large platforms never could were simply eliminated by the cost of compliance with laws notionally designed to protect them. The EFF described this plainly: age verification mandates [concentrate and consolidate power in the hands of the largest companies](https://www.eff.org/deeplinks/2025/09/age-verification-windfall-big-tech-and-death-sentence-smaller-platforms) - the only entities with resources to build costly compliance systems and absorb potentially massive fines - while pushing smaller, often better communities offline.
 
 The result is that every time a state or national government passes an age verification law, it inadvertently runs a consolidation program for the very tech giants lawmakers claim to be holding accountable. Users who cancel Discord in protest and migrate to smaller federated platforms are pushing those platforms toward the same compliance cliff. Users who stay on Discord - even while hating its verification system - are at least supporting a platform that has the resources to weather the storm, however imperfectly. Neither choice addresses the actual problem. Neither choice changes the underlying law. And the underlying law is what's doing all of this damage.
-
----
 
 ## The Surveillance Infrastructure Question - The Long Game
 
@@ -127,8 +113,6 @@ The EFF has [warned consistently](https://www.eff.org/deeplinks/2025/12/10-not-s
 Research has confirmed what advocates predicted and what data now documents: [age verification laws don't work](https://www.eff.org/deeplinks/2025/12/year-states-chose-surveillance-over-safety-2025-review). Studies from the New York Center for Social Media and Politics and the Phoenix Center found that when platforms blocked access under these laws, searches for platforms that had blocked access dropped - but searches for offshore sites surged. Florida saw a [1,150% increase in VPN demand](https://en.wikipedia.org/wiki/Social_media_age_verification_laws_in_the_United_States) after its age verification law took effect. Children determined to access content routed around the restrictions. Adults committed to privacy used VPNs. The platforms that complied lost users. The platforms that didn't comply gained them. And the unregulated, less safe corners of the internet grew.
 
 The laws accomplish one thing reliably: they build the infrastructure of identity verification into the baseline of internet access. Once built, that infrastructure doesn't disappear. It expands.
-
----
 
 ## Where to Actually Direct Your Energy
 
