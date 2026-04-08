@@ -1089,6 +1089,6 @@ A real-time renderer is one of the most demanding software systems you can build
 
 Helio's approach concentrates complexity in the passes and the render graph while keeping the user-facing API minimal. The G-buffer decouples geometry from shading to enable many lights. The indirect draw system moves scene traversal to the GPU to keep CPU overhead O(1). The dirty tracking system ensures minimal data upload between frames. The handle-based scene API keeps user code clean and prevents lifetime bugs. Each of these choices reflects a specific lesson learned from building and shipping real-time graphics systems.
 
-The pipeline described in this post covers the default graph. Helio also ships an HLFS (Hybrid Lit Forward Shading) graph for transparent objects, volumetric effects, SSAO, SDF-based distance fields for particle collision and audio occlusion, and more. The modular architecture means these can be composed in any order, swapped out, or replaced with custom implementations.
+The pipeline described in this post covers the default graph. Helio also ships an HLFS (Hierarchical Light-Field Sampling) graph with our own experimental take on high performance global illumination! 
 
 If graphics programming is something you've found intimidating, I hope this walk-through made it more legible. The concepts—depth buffers, G-buffers, shadow maps, temporal accumulation—have clear purposes once you understand what problem each one is solving. And if any of this sounds interesting to try, Helio's source is open.
