@@ -24,23 +24,42 @@ export async function generateMetadata({ params }) {
     const awaitedParams = await params;
     const { slug } = awaitedParams;
     const blog = await getBlogBySlug(slug);
-    
+
     if (!blog) {
       return {
         title: 'Post Not Found',
-        description: 'The requested blog post could not be found.'
+        description: 'The requested blog post could not be found.',
       };
     }
-    
+
+    const description = blog.description || blog.excerpt || 'No description available';
+    const tags = Array.isArray(blog.tags) ? blog.tags.filter(Boolean) : [];
+    const coverImage = blog.cover ? `${basePath}/blogs/covers/${blog.cover}` : null;
+
     return {
       title: blog.title,
-      description: blog.excerpt || (blog.content ? blog.content.slice(0, 150) + '...' : 'No description available'),
+      description,
+      openGraph: {
+        title: blog.title,
+        description,
+        type: 'article',
+        publishedTime: blog.date,
+        modifiedTime: blog.updated || blog.date,
+        images: coverImage ? [{ url: coverImage, alt: blog.title }] : [],
+        tags,
+      },
+      twitter: {
+        card: coverImage ? 'summary_large_image' : 'summary',
+        title: blog.title,
+        description,
+        images: coverImage ? [coverImage] : undefined,
+      },
     };
   } catch (error) {
     console.error('Error generating metadata:', error);
     return {
       title: 'Error',
-      description: 'There was an error loading this post'
+      description: 'There was an error loading this post',
     };
   }
 }

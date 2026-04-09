@@ -5,6 +5,26 @@ import matter from 'gray-matter';
 
 const blogsDirectory = path.join(process.cwd(), 'public/blogs');
 
+function extractExcerpt(rawMarkdown, maxLength = 160) {
+  const cleaned = rawMarkdown
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`]*`/g, '')
+    .replace(/!\[.*?\]\(.*?\)/g, '')
+    .replace(/\[([^\]]+)\]\((.*?)\)/g, '$1')
+    .replace(/#{1,6}\s.*$/gm, '')
+    .replace(/>\s?/g, '')
+    .replace(/[-*+] +/g, '')
+    .replace(/\*\*|__|\*|_/g, '')
+    .replace(/\n{2,}/g, '\n\n')
+    .trim();
+
+  const match = cleaned.match(/([\s\S]*?)(?:\n\s*\n|$)/);
+  const paragraph = match ? match[1].trim() : cleaned;
+  if (!paragraph) return '';
+  if (paragraph.length <= maxLength) return paragraph;
+  return paragraph.slice(0, maxLength).trim().replace(/\s+$/, '') + '...';
+}
+
 /**
  * Gets all blog post slugs from the blogs directory
  * @returns {Promise<string[]>} Array of slugs
@@ -40,14 +60,8 @@ export async function getBlogBySlug(slug) {
     });
     
     // Generate excerpt if not explicitly provided
-    let postExcerpt = data.excerpt;
-    if (!postExcerpt) {
-      if (excerpt) {
-        postExcerpt = excerpt.trim();
-      } else {
-        postExcerpt = content.slice(0, 150).trim() + '...';
-      }
-    }
+    const excerptSource = data.excerpt || data.description || data.summary || excerpt?.trim();
+    const postExcerpt = excerptSource || extractExcerpt(content);
     
     // Calculate reading time (average 200 words per minute)
     const wordCount = content.split(/\s+/).length;
@@ -64,6 +78,7 @@ export async function getBlogBySlug(slug) {
       updated: data.updated || stats.mtime.toISOString(), 
       tags: data.tags || [],
       excerpt: postExcerpt,
+      description: data.description || postExcerpt,
       readingTime,
       ...data, // Include all frontmatter data
     };
