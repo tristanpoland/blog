@@ -5,7 +5,20 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 const basePath = process.env.NEXT_PUBLIC_CUSTOM_BASE_PATH || '';
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+function normalizeSiteUrl(url) {
+  if (!url) return undefined;
+  try {
+    const parsed = new URL(url);
+    const hostname = parsed.hostname.toLowerCase();
+    if (hostname === 'localhost' || hostname === '127.0.0.1') return undefined;
+    return parsed.toString().replace(/\/+$/, '');
+  } catch {
+    return undefined;
+  }
+}
+
+const siteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 const hasSiteUrl = Boolean(siteUrl);
 
 // This function gets called at build time to generate static paths
