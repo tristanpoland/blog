@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 const basePath = process.env.NEXT_PUBLIC_CUSTOM_BASE_PATH || '';
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const hasSiteUrl = Boolean(siteUrl);
 
 // This function gets called at build time to generate static paths
 export async function generateStaticParams() {
@@ -35,19 +36,15 @@ export async function generateMetadata({ params }) {
 
     const description = blog.description || blog.excerpt || 'No description available';
     const tags = Array.isArray(blog.tags) ? blog.tags.filter(Boolean) : [];
-    const postUrl = new URL(`${basePath}/posts/${slug}`, siteUrl).toString();
-    const coverImage = blog.cover ? new URL(`${basePath}/blogs/covers/${blog.cover}`, siteUrl).toString() : null;
+    const postUrl = hasSiteUrl ? new URL(`${basePath}/posts/${slug}`, siteUrl).toString() : `${basePath}/posts/${slug}`;
+    const coverImage = blog.cover ? (hasSiteUrl ? new URL(`${basePath}/blogs/covers/${blog.cover}`, siteUrl).toString() : `${basePath}/blogs/covers/${blog.cover}`) : null;
 
-    return {
+    const metadata = {
       title: blog.title,
       description,
-      alternates: {
-        canonical: postUrl,
-      },
       openGraph: {
         title: blog.title,
         description,
-        url: postUrl,
         siteName: 'Tristan Poland Blog',
         type: 'article',
         publishedTime: blog.date,
@@ -64,6 +61,13 @@ export async function generateMetadata({ params }) {
         images: coverImage ? [coverImage] : undefined,
       },
     };
+
+    if (hasSiteUrl) {
+      metadata.alternates = { canonical: postUrl };
+      metadata.openGraph.url = postUrl;
+    }
+
+    return metadata;
   } catch (error) {
     console.error('Error generating metadata:', error);
     return {
