@@ -25,15 +25,6 @@ if (typeof window !== 'undefined') {
 
 
 
-const basePath = process.env.NEXT_PUBLIC_CUSTOM_BASE_PATH || '';
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-
-export const metadataBase = new URL(`${basePath}/`, siteUrl);
-export const metadata = {
-  title: 'Blog - Tristan Poland',
-  description: 'A blog about game and web development, backend programming, hardware, security, privacy, and technology.',
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -53,8 +44,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content={metadata.description} />
-        <title>{metadata.title}</title>
       </head>
 
       <body
