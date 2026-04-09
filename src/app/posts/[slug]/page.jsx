@@ -8,8 +8,10 @@ const basePath = process.env.NEXT_PUBLIC_CUSTOM_BASE_PATH || '';
 
 function normalizeSiteUrl(url) {
   if (!url) return undefined;
+  const candidate = url.trim().replace(/\/+$/, '');
+  const normalized = /^https?:\/\//i.test(candidate) ? candidate : `https://${candidate}`;
   try {
-    const parsed = new URL(url);
+    const parsed = new URL(normalized);
     const hostname = parsed.hostname.toLowerCase();
     if (hostname === 'localhost' || hostname === '127.0.0.1') return undefined;
     return parsed.toString().replace(/\/+$/, '');
@@ -18,7 +20,17 @@ function normalizeSiteUrl(url) {
   }
 }
 
-const siteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
+function getSiteUrl() {
+  return (
+    normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ||
+    normalizeSiteUrl(process.env.NEXT_PUBLIC_VERCEL_URL) ||
+    normalizeSiteUrl(process.env.VERCEL_URL) ||
+    normalizeSiteUrl(process.env.RENDER_EXTERNAL_URL) ||
+    normalizeSiteUrl(process.env.NETLIFY_SITE_URL)
+  );
+}
+
+const siteUrl = getSiteUrl();
 const hasSiteUrl = Boolean(siteUrl);
 
 // This function gets called at build time to generate static paths
@@ -62,7 +74,6 @@ export async function generateMetadata({ params }) {
         type: 'article',
         publishedTime: blog.date,
         modifiedTime: blog.updated || blog.date,
-        images: coverImage ? [{ url: coverImage, alt: blog.title }] : [],
         article: {
           tags,
         },
@@ -71,11 +82,13 @@ export async function generateMetadata({ params }) {
         card: coverImage ? 'summary_large_image' : 'summary',
         title: blog.title,
         description,
-        images: coverImage ? [coverImage] : undefined,
       },
     };
 
     if (hasSiteUrl) {
+      metadata.openGraph.images = coverImage ? [{ url: coverImage, alt: blog.title }] : [];
+      metadata.twitter.images = coverImage ? [coverImage] : undefined;
+      const postUrl = new URL(`${basePath}/posts/${slug}`, siteUrl).toString();
       metadata.alternates = { canonical: postUrl };
       metadata.openGraph.url = postUrl;
     }
