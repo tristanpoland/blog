@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 const basePath = process.env.NEXT_PUBLIC_CUSTOM_BASE_PATH || '';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 // This function gets called at build time to generate static paths
 export async function generateStaticParams() {
@@ -34,19 +35,27 @@ export async function generateMetadata({ params }) {
 
     const description = blog.description || blog.excerpt || 'No description available';
     const tags = Array.isArray(blog.tags) ? blog.tags.filter(Boolean) : [];
-    const coverImage = blog.cover ? `${basePath}/blogs/covers/${blog.cover}` : null;
+    const postUrl = new URL(`${basePath}/posts/${slug}`, siteUrl).toString();
+    const coverImage = blog.cover ? new URL(`${basePath}/blogs/covers/${blog.cover}`, siteUrl).toString() : null;
 
     return {
       title: blog.title,
       description,
+      alternates: {
+        canonical: postUrl,
+      },
       openGraph: {
         title: blog.title,
         description,
+        url: postUrl,
+        siteName: 'Tristan Poland Blog',
         type: 'article',
         publishedTime: blog.date,
         modifiedTime: blog.updated || blog.date,
         images: coverImage ? [{ url: coverImage, alt: blog.title }] : [],
-        tags,
+        article: {
+          tags,
+        },
       },
       twitter: {
         card: coverImage ? 'summary_large_image' : 'summary',
