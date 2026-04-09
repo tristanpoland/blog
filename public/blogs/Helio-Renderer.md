@@ -399,14 +399,12 @@ In forward rendering, you draw each object and compute its full lighting immedia
 
 Deferred rendering decouples geometry from shading. In the G-buffer pass, we draw all opaque geometry but *don't* compute any lighting. Instead, we write the raw material and surface properties to a set of render targets:
 
-```
 | Slot | Name     | Format        | Contents                              |
 |------|----------|---------------|---------------------------------------|
 | 0    | albedo   | Rgba8Unorm    | base color RGB + alpha                |
 | 1    | normal   | Rgba16Float   | world-space normal XYZ + F0.r         |
 | 2    | orm      | Rgba8Unorm    | ambient occlusion, roughness, metallic|
 | 3    | emissive | Rgba16Float   | emissive color RGB + F0.b             |
-```
 
 After the G-buffer pass, these four textures contain a complete description of the visible surface at every pixel—position is reconstructable from depth + the camera matrix, normals tell lighting which way the surface faces, and the ORM texture gives us the PBR material parameters.
 
