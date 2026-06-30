@@ -1,11 +1,10 @@
 import fs from 'fs';
 import path from 'path';
-import BlogPost from '../components/BlogPost';
+import MergedBlogGrid from '../components/MergedBlogGrid';
 
 const basePath = process.env.NEXT_PUBLIC_CUSTOM_BASE_PATH || '';
 
 export default function Home() {
-  // Read the blog index
   let blogPosts = [];
   const indexPath = path.join(process.cwd(), 'public/blog-index.json');
   
@@ -37,19 +36,7 @@ export default function Home() {
         </p>
       </div>
 
-      {blogPosts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
-          {blogPosts.map((post) => (
-            <BlogPost key={post.slug} post={post} />
-          ))}
-        </div>
-      ) : (
-        <div className="text-center py-12">
-          <p className="text-gray-600 dark:text-gray-400">
-            No blog posts found. Add some markdown files to the /public/blogs directory to get started.
-          </p>
-        </div>
-      )}
+      <MergedBlogGrid personalPosts={blogPosts} />
     </div>
   );
 }

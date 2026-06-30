@@ -1,6 +1,6 @@
 const basePath = process.env.NEXT_PUBLIC_CUSTOM_BASE_PATH || '';
 
-function normalizeSiteUrl(url) {
+function normalizeSiteUrl(url: string | undefined) {
   if (!url) return undefined;
   const candidate = url.trim().replace(/\/+$/, '');
   const normalized = /^https?:\/\//i.test(candidate) ? candidate : `https://${candidate}`;

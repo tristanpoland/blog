@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, Calendar, Clock, Tag, ExternalLink, Home, User, BookOpen, FolderOpen } from 'lucide-react';
 
 const url_prefix = 'https://tridentforu.com/';
+const PULSAR_API = 'https://pulsarnative.com/blog/blog-all.json';
 
 interface Page {
   name: string;
@@ -32,6 +33,7 @@ interface SearchResult {
   tags?: string[];
   author?: string;
   pinned?: boolean;
+  source?: string;
 }
 
 interface SearchModalProps {
@@ -59,6 +61,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [selectedResult, setSelectedResult] = useState<SearchResult | null>(null);
   const [isPeeking, setIsPeeking] = useState<boolean>(false);
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [pulsarPosts, setPulsarPosts] = useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -81,29 +84,63 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     return cleanText.substring(0, maxLength) + '...';
   };
 
-  // Fetch blog posts
+  // Fetch blog posts (personal + Pulsar)
   useEffect(() => {
-    const fetchBlogPosts = async (): Promise<void> => {
-      try {
-        const response = await fetch(`${url_prefix}blog/blog-index.json`);
-        const data: unknown = await response.json();
-        // Ensure data is an array and all posts have required fields
-        const validatedData = Array.isArray(data) ? data.filter((post: unknown): post is BlogPost => 
-          post !== null &&
-          typeof post === 'object' && 
-          'title' in post &&
-          'slug' in post &&
-          typeof post.title === 'string' &&
-          typeof post.slug === 'string'
-        ) : [];
-        setBlogPosts(validatedData);
-      } catch (error) {
-        console.error('Error fetching blog posts:', error);
-        setBlogPosts([]); // Ensure we always set an array
+    const fetchAll = async (): Promise<void> => {
+      const [personalRes, pulsarRes] = await Promise.allSettled([
+        fetch(`${url_prefix}blog/blog-index.json`),
+        fetch(PULSAR_API),
+      ]);
+
+      // Personal blog posts
+      if (personalRes.status === 'fulfilled') {
+        try {
+          const data: unknown = await personalRes.value.json();
+          setBlogPosts(Array.isArray(data) ? data.filter((post: unknown): post is BlogPost =>
+            post !== null &&
+            typeof post === 'object' &&
+            'title' in post &&
+            'slug' in post &&
+            typeof post.title === 'string' &&
+            typeof post.slug === 'string'
+          ) : []);
+        } catch {
+          setBlogPosts([]);
+        }
+      } else {
+        setBlogPosts([]);
+      }
+
+      // Pulsar blog posts
+      if (pulsarRes.status === 'fulfilled') {
+        try {
+          const data: unknown = await pulsarRes.value.json();
+          setPulsarPosts(Array.isArray(data) ? data.filter((post: unknown): post is BlogPost =>
+            post !== null &&
+            typeof post === 'object' &&
+            'title' in post &&
+            'slug' in post &&
+            typeof post.title === 'string' &&
+            typeof post.slug === 'string'
+          ).map((p: any) => ({
+            title: p.title,
+            slug: p.slug,
+            excerpt: p.description,
+            date: p.date,
+            readingTime: p.readingTime,
+            tags: p.tags,
+            author: p.author,
+            source: 'pulsar',
+          })) : []);
+        } catch {
+          setPulsarPosts([]);
+        }
+      } else {
+        setPulsarPosts([]);
       }
     };
-    
-    fetchBlogPosts();
+
+    fetchAll();
   }, []);
 
   // Handle search functionality
@@ -115,10 +152,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
       const pageResults: SearchResult[] = [...pages];
       const blogResults: SearchResult[] = blogPosts.slice(0, 3)
         .map(post => {
-          // Ensure post has required fields before processing
-          if (!post || !post.title || !post.slug) {
-            return null;
-          }
+          if (!post || !post.title || !post.slug) return null;
           return {
             name: post.title,
             href: `${url_prefix}blog/posts/${post.slug}`,
@@ -133,8 +167,24 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         })
         .filter(result => result !== null) as SearchResult[];
       
-      // Combine with pages first, then blogs
-      const combinedResults = [...pageResults, ...blogResults];
+      const pulsarResults: SearchResult[] = pulsarPosts.slice(0, 3)
+        .map(post => {
+          if (!post || !post.title || !post.slug) return null;
+          return {
+            name: post.title,
+            href: `https://pulsarnative.com/blog/${post.slug}`,
+            description: truncateText(post.excerpt, 100),
+            type: 'blog' as const,
+            date: post.date,
+            readingTime: post.readingTime,
+            tags: post.tags,
+            author: post.author,
+            source: 'pulsar',
+          };
+        })
+        .filter(result => result !== null) as SearchResult[];
+
+      const combinedResults = [...pageResults, ...blogResults, ...pulsarResults];
       setSearchResults(combinedResults);
       setSelectedResultIndex(combinedResults.length > 0 ? 0 : -1);
       setIsLoading(false);
@@ -174,13 +224,35 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
       author: post.author
     }));
     
-    // Always combine with pages first, then blogs
-    const combinedResults = [...pageResults, ...blogResults];
+    // Add Pulsar blog posts
+    const pulsarResults: SearchResult[] = pulsarPosts
+      .filter(post => {
+        if (!post || !post.title || !post.slug) return false;
+        if (searchQuery.trim() === '') return true;
+        return (
+          safeToLowerCase(post.title).includes(query) ||
+          safeToLowerCase(post.excerpt).includes(query) ||
+          (post.tags && Array.isArray(post.tags) && post.tags.some(tag => safeToLowerCase(tag).includes(query)))
+        );
+      })
+      .map(post => ({
+        name: post.title,
+        href: `https://pulsarnative.com/blog/${post.slug}`,
+        description: truncateText(post.excerpt, 100),
+        type: 'blog' as const,
+        date: post.date,
+        readingTime: post.readingTime,
+        tags: post.tags,
+        author: post.author,
+        source: 'pulsar',
+      }));
+
+    const combinedResults = [...pageResults, ...blogResults, ...pulsarResults];
     
     setSearchResults(combinedResults);
     setSelectedResultIndex(combinedResults.length > 0 ? 0 : -1);
     setIsLoading(false);
-  }, [searchQuery, blogPosts]);
+  }, [searchQuery, blogPosts, pulsarPosts]);
 
   // Update selectedResult when selectedResultIndex changes
   useEffect(() => {
@@ -435,13 +507,18 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                                 {getResultIcon(result)}
                                 <div className="text-blue-400 text-sm leading-snug line-clamp-2 break-words">{result.name}</div>
                               </div>
-                              <div className="flex space-x-2" style={{whiteSpace: 'nowrap'}}>
+                              <div className="flex space-x-2 flex-wrap" style={{whiteSpace: 'nowrap'}}>
                                 <div className="bg-blue-900/40 text-blue-300 text-xs px-2 py-0.5 rounded" style={{whiteSpace: 'nowrap'}}>
                                   {result.date && formatDate(result.date)}
                                 </div>
                                 <div className="bg-gray-800 text-gray-300 text-xs px-2 py-0.5 rounded" style={{whiteSpace: 'nowrap'}}>
                                   {result.readingTime} min read
                                 </div>
+                                {result.source === 'pulsar' && (
+                                  <div className="bg-purple-900/40 text-purple-300 text-xs px-2 py-0.5 rounded" style={{whiteSpace: 'nowrap'}}>
+                                    Pulsar
+                                  </div>
+                                )}
                               </div>
                             </div>
                           <div className="text-white text-base truncate">{result.description}</div>
@@ -517,13 +594,18 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                                 {getResultIcon(result)}
                                 <div className="text-blue-400 text-sm leading-snug line-clamp-2 break-words">{result.name}</div>
                               </div>
-                              <div className="flex space-x-2" style={{whiteSpace: 'nowrap', overflow: 'hidden'}}>
+                              <div className="flex space-x-2 flex-wrap" style={{whiteSpace: 'nowrap', overflow: 'hidden'}}>
                                 <div className="bg-blue-900/40 text-blue-300 text-xs px-2 py-0.5 rounded" style={{whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '7em'}}>
                                   {result.date && formatDate(result.date)}
                                 </div>
                                 <div className="bg-gray-800 text-gray-300 text-xs px-2 py-0.5 rounded" style={{whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '8em'}}>
                                   {result.readingTime} min read
                                 </div>
+                                {result.source === 'pulsar' && (
+                                  <div className="bg-purple-900/40 text-purple-300 text-xs px-2 py-0.5 rounded" style={{whiteSpace: 'nowrap'}}>
+                                    Pulsar
+                                  </div>
+                                )}
                               </div>
                             </div>
                             <div className="text-white text-base truncate">{result.description}</div>

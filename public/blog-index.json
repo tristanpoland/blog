@@ -16,7 +16,7 @@
       "Deferred Rendering"
     ],
     "cover": "helio-intro.png",
-    "excerpt": "\r\n## What We're Actually Talking About\r\n\r\nWhen you play a video game and a ray of light catches the edge of a wet cobblestone, or shadows stretch real...",
+    "excerpt": "\n## What We're Actually Talking About\n\nWhen you play a video game and a ray of light catches the edge of a wet cobblestone, or shadows stretch realist...",
     "readingTime": 43,
     "fileName": "Helio-Renderer.md"
   },
@@ -35,7 +35,7 @@
       "Law"
     ],
     "cover": "id-verification.png",
-    "excerpt": "\r\n## A Firestorm Aimed at the Wrong Target\r\n\r\nThe internet has been in an uproar. Discord's announcement that it would begin rolling out global age ve...",
+    "excerpt": "\n## A Firestorm Aimed at the Wrong Target\n\nThe internet has been in an uproar. Discord's announcement that it would begin rolling out global age verif...",
     "readingTime": 27,
     "fileName": "id-verification.md"
   },
@@ -51,7 +51,7 @@
       "Scam"
     ],
     "cover": "crypto-scam-1.jpg",
-    "excerpt": "\r\nIt starts with a message that feels strangely intimate.\r\n\r\n<div class=\"side-by-side-images\">\r\n  <img src=\"/blog/blogs/covers/crypto-scam-1(msg_scree...",
+    "excerpt": "\nIt starts with a message that feels strangely intimate.\n\n<div class=\"side-by-side-images\">\n  <img src=\"/blog/blogs/covers/crypto-scam-1(msg_screensho...",
     "readingTime": 5,
     "fileName": "crypto-scam-1.md"
   },
@@ -68,7 +68,7 @@
       "Nerd Drama"
     ],
     "cover": "Zig-Blog.png",
-    "excerpt": "\r\nI've decided to step back from the Zig programming language and its community. This isn't a knee-jerk reaction to one incident, but rather the resul...",
+    "excerpt": "\nI've decided to step back from the Zig programming language and its community. This isn't a knee-jerk reaction to one incident, but rather the result...",
     "readingTime": 8,
     "fileName": "Zig-Blog.md"
   },
@@ -91,7 +91,7 @@
       "Lock-Free Programming"
     ],
     "cover": "gpui-viewport.png",
-    "excerpt": "\r\n## Introduction\r\n\r\nFor the past several months, I've been deep in the trenches building a professional-grade 3D viewport system for the Pulsar game ...",
+    "excerpt": "\n## Introduction\n\nFor the past several months, I've been deep in the trenches building a professional-grade 3D viewport system for the Pulsar game eng...",
     "readingTime": 28,
     "fileName": "gpui-viewport.md"
   },
@@ -114,7 +114,7 @@
       "Context Menus"
     ],
     "cover": "gpui-interactive.png",
-    "excerpt": "\r\nWhen I first started working with GPUI (the UI framework powering Zed), I made every mistake in the book. I tried to handle actions in constructors,...",
+    "excerpt": "\nWhen I first started working with GPUI (the UI framework powering Zed), I made every mistake in the book. I tried to handle actions in constructors, ...",
     "readingTime": 16,
     "fileName": "gpui-interactive.md"
   },
@@ -135,7 +135,7 @@
       "Rust UI"
     ],
     "cover": "gpui-mouse-position.png",
-    "excerpt": "\r\n*Or: How I spent 3 days debugging why my node graph thought I was clicking 250 pixels to the left of where my mouse actually was.*\r\n\r\n## The Scene o...",
+    "excerpt": "\n*Or: How I spent 3 days debugging why my node graph thought I was clicking 250 pixels to the left of where my mouse actually was.*\n\n## The Scene of t...",
     "readingTime": 16,
     "fileName": "gpui-mouse-position.md"
   },
@@ -152,7 +152,7 @@
       "Workflows"
     ],
     "cover": "I-wont-linux.png",
-    "excerpt": "\r\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded systems? Of course. But as a dai...",
+    "excerpt": "\nEvery few months, the same debate resurfaces: “Why don’t you just use Linux?” For servers? Absolutely. For embedded systems? Of course. But as a dail...",
     "readingTime": 5,
     "fileName": "I-wont-linux.md"
   },
@@ -173,7 +173,7 @@
       "Type Safety"
     ],
     "cover": "Node-Nonsense-1.png",
-    "excerpt": "\r\n# Type Safety and Documentation in Rust Node Graph Systems\r\n\r\nNode graph systems are a popular way to visually represent logic, workflows, or data f...",
+    "excerpt": "\n# Type Safety and Documentation in Rust Node Graph Systems\n\nNode graph systems are a popular way to visually represent logic, workflows, or data flow...",
     "readingTime": 4,
     "fileName": "Node-Nonesense-1.md"
   },
@@ -194,7 +194,7 @@
       "Spyware"
     ],
     "cover": "somebodys-watchin-me-2.png",
-    "excerpt": "\r\n# Mobile Spyware Reality Check: What Pegasus and Graphite Actually Do (And Don't Do)\r\n\r\nIf you've spent any time on TikTok or Instagram lately, you'...",
+    "excerpt": "\n# Mobile Spyware Reality Check: What Pegasus and Graphite Actually Do (And Don't Do)\n\nIf you've spent any time on TikTok or Instagram lately, you've ...",
     "readingTime": 17,
     "fileName": "somebodys-watchin-me-2.md"
   },
@@ -213,7 +213,7 @@
       "Security"
     ],
     "cover": "TPM-Modules.png",
-    "excerpt": "\r\n# The basics\r\n\r\nThe Trusted Platform Module (TPM) 2.0 has become one of cybersecurity's most polarizing technologies, generating fierce debate betwe...",
+    "excerpt": "\n# The basics\n\nThe Trusted Platform Module (TPM) 2.0 has become one of cybersecurity's most polarizing technologies, generating fierce debate between ...",
     "readingTime": 10,
     "fileName": "TPM-Modules.md"
   },
@@ -232,7 +232,7 @@
       "Security"
     ],
     "cover": "OS-Security-Showdown.png",
-    "excerpt": "\r\n## The TL;DR\r\n\r\n* **Short answer:** For **typical desktop users** running stock operating systems without additional security software, **Windows 11...",
+    "excerpt": "\n## The TL;DR\n\n* **Short answer:** For **typical desktop users** running stock operating systems without additional security software, **Windows 11** ...",
     "readingTime": 16,
     "fileName": "OS-Security-Showdown.md"
   },
@@ -252,7 +252,7 @@
       "Digital Rights"
     ],
     "cover": "somebodys-watchin-me.png",
-    "excerpt": "\r\n*Published July 31, 2025*\r\n\r\n**Disclaimer: This content is for informational purposes and is not legal advice.**\r\n\r\nThe most dangerous government pr...",
+    "excerpt": "\n*Published July 31, 2025*\n\n**Disclaimer: This content is for informational purposes and is not legal advice.**\n\nThe most dangerous government program...",
     "readingTime": 28,
     "fileName": "somebodys-watchin-me.md"
   },
@@ -272,7 +272,7 @@
       "Rant"
     ],
     "cover": "hard-refs-brainmelt.png",
-    "excerpt": "\r\n# A Brief Intro to the Issue\r\n\r\nUnreal Engine's Blueprint visual scripting system stands as a cornerstone of its accessibility and rapid prototyping...",
+    "excerpt": "\n# A Brief Intro to the Issue\n\nUnreal Engine's Blueprint visual scripting system stands as a cornerstone of its accessibility and rapid prototyping ca...",
     "readingTime": 36,
     "fileName": "hard-refs-brainmelt.md"
   },
@@ -292,7 +292,7 @@
       "Networking"
     ],
     "cover": "Buzzwords-The-Edge.png",
-    "excerpt": "\r\n# Edge Computing: Beyond the Buzzword Fog\r\n\r\nEdge computing has become the latest Silicon Valley darling, promising to revolutionize everything from...",
+    "excerpt": "\n# Edge Computing: Beyond the Buzzword Fog\n\nEdge computing has become the latest Silicon Valley darling, promising to revolutionize everything from au...",
     "readingTime": 18,
     "fileName": "Buzzwords-The-Edge.md"
   },
@@ -317,7 +317,7 @@
       "Performance"
     ],
     "cover": "horizon-game-server-pt2.png",
-    "excerpt": "\r\n*The technical journey of building a game server that breaks Unreal Engine's limits and powers massive space battles*\r\n\r\n## The Problem That Started...",
+    "excerpt": "\n*The technical journey of building a game server that breaks Unreal Engine's limits and powers massive space battles*\n\n## The Problem That Started Ev...",
     "readingTime": 21,
     "fileName": "horizon-game-server-pt2.md"
   },
@@ -334,7 +334,7 @@
       "Architecture"
     ],
     "cover": "SurrealDB.png",
-    "excerpt": "\r\n## The SurrealDB Reality Check: When Marketing Meets Performance\r\n\r\nWhen SurrealDB burst onto the scene with promises of \"one database, infinite mem...",
+    "excerpt": "\n## The SurrealDB Reality Check: When Marketing Meets Performance\n\nWhen SurrealDB burst onto the scene with promises of \"one database, infinite memory...",
     "readingTime": 6,
     "fileName": "SurrealDB.md"
   },
@@ -351,7 +351,7 @@
       "Architecture"
     ],
     "cover": "Apple-AI-Paper.png",
-    "excerpt": "\r\n## The Story Behind Apple's \"Illusion of Thinking\"\r\n\r\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and ...",
+    "excerpt": "\n## The Story Behind Apple's \"Illusion of Thinking\"\n\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and Lim...",
     "readingTime": 14,
     "fileName": "Apple-AI-Paper.md"
   },
@@ -372,7 +372,7 @@
     ],
     "readingTime": 15,
     "cover": "Digital-Stop-and-Frisk.png",
-    "excerpt": "\r\n## Introduction\r\n\r\nI've been thinking a lot about device security lately. With increased border searches and the ease with which both government age...",
+    "excerpt": "\n## Introduction\n\nI've been thinking a lot about device security lately. With increased border searches and the ease with which both government agenci...",
     "fileName": "Digital-Stop-and-Frisk.md"
   },
   {
@@ -393,7 +393,7 @@
       "Dev Containers"
     ],
     "cover": "Lenovo-Legion-Slim-7.png",
-    "excerpt": "\r\n## Introduction\r\n\r\nBack in January 2024, I finally bit the bullet and grabbed a Lenovo Legion Slim 7 16IRH8. It showed up about a week later, and I'...",
+    "excerpt": "\n## Introduction\n\nBack in January 2024, I finally bit the bullet and grabbed a Lenovo Legion Slim 7 16IRH8. It showed up about a week later, and I've ...",
     "readingTime": 8,
     "fileName": "Lenovo-Legion-Slim-7.md"
   },
@@ -408,7 +408,7 @@
       "VPNs"
     ],
     "cover": "VPNs-wont-save-us.png",
-    "excerpt": "\r\n# Addressing the issue\r\n\r\nWe have all seen segments on YouTube and platforms like it advertising that you are \"safer\" online when using a VPN. This ...",
+    "excerpt": "\n# Addressing the issue\n\nWe have all seen segments on YouTube and platforms like it advertising that you are \"safer\" online when using a VPN. This can...",
     "readingTime": 5,
     "fileName": "VPNs-wont-save-us.md"
   },
@@ -426,7 +426,7 @@
       "Architecture"
     ],
     "cover": "The-Ruby-Monolith-Mindset.png",
-    "excerpt": "\r\n# The Ruby Monolith Mindset: When Familiarity Breeds Technical Debt\r\n\r\nIn the ever-evolving landscape of software development, certain patterns emer...",
+    "excerpt": "\n# The Ruby Monolith Mindset: When Familiarity Breeds Technical Debt\n\nIn the ever-evolving landscape of software development, certain patterns emerge ...",
     "readingTime": 8,
     "fileName": "The-Ruby-Monolith-Mindset.md"
   },
@@ -442,7 +442,7 @@
       "Architecture"
     ],
     "cover": "Macros-vs-Functions.png",
-    "excerpt": "\r\n# Macros VS Functions, and When to Apply Them\r\n\r\nRecently I came across a group of individuals that seemed convinced that macros were terrible and a...",
+    "excerpt": "\n# Macros VS Functions, and When to Apply Them\n\nRecently I came across a group of individuals that seemed convinced that macros were terrible and alwa...",
     "readingTime": 9,
     "fileName": "Macros-vs-Functions.md"
   },
@@ -458,7 +458,7 @@
       "Architecture"
     ],
     "cover": "Demystifying-Casting.png",
-    "excerpt": "\r\nIn the world of Unreal Engine 5 game development (particularly in Blueprint), there's a persistent myth that casting is inherently bad for performan...",
+    "excerpt": "\nIn the world of Unreal Engine 5 game development (particularly in Blueprint), there's a persistent myth that casting is inherently bad for performanc...",
     "readingTime": 5,
     "fileName": "Demystifying-Casting.md"
   },
@@ -474,7 +474,7 @@
     "tags": [
       "Automation"
     ],
-    "excerpt": "\r\nAs a software developer, I've long been fascinated by the intricacies of CI/CD systems. Recently, I embarked on an ambitious project: creating a Rus...",
+    "excerpt": "\nAs a software developer, I've long been fascinated by the intricacies of CI/CD systems. Recently, I embarked on an ambitious project: creating a Rust...",
     "readingTime": 3,
     "fileName": "CICD-reimagined.md"
   },
@@ -493,7 +493,7 @@
       "Distributed Computing"
     ],
     "cover": "horizon-game-server-pt1.png",
-    "excerpt": "\r\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's...",
+    "excerpt": "\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's ...",
     "readingTime": 4,
     "fileName": "horizon-game-server-pt1.md"
   },
@@ -508,7 +508,7 @@
     "tags": [
       "Architecture"
     ],
-    "excerpt": "\r\n## A brief introduction to the problem\r\n\r\nIn recent years, a concerning trend has emerged in the tech world: the rise of what we might call \"tech tr...",
+    "excerpt": "\n## A brief introduction to the problem\n\nIn recent years, a concerning trend has emerged in the tech world: the rise of what we might call \"tech triba...",
     "readingTime": 9,
     "fileName": "rise-of-tech-tribalism.md"
   }
