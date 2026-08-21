@@ -1,5 +1,25 @@
 [
   {
+    "slug": "Apple-AI-Paper",
+    "title": "Why Enterprise Will Never Adopt Nix (And Why It Shouldn't)",
+    "date": "2026-8-21",
+    "categories": [
+      "Programming",
+      "DevOps",
+      "Infrastructure"
+    ],
+    "tags": [
+      "Nix",
+      "Containers",
+      "Kubernetes",
+      "Architecture"
+    ],
+    "cover": "no_nix.png",
+    "excerpt": "\r\n## The Story Behind Apple's \"Illusion of Thinking\"\r\n\r\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and ...",
+    "readingTime": 14,
+    "fileName": "Apple-AI-Paper.md"
+  },
+  {
     "slug": "ghost-in-the-predictive-machine",
     "title": "The Ghost in the Predictive Machine: Why the Brain and the LLM Run on the Same Code",
     "date": "2026-07-07",
@@ -358,23 +378,6 @@
     "fileName": "SurrealDB.md"
   },
   {
-    "slug": "Apple-AI-Paper",
-    "title": "The Story Behind Apple's 'Illusion of Thinking'",
-    "date": "2025-6-18",
-    "categories": [
-      "Programing",
-      "Performance",
-      "LLMs"
-    ],
-    "tags": [
-      "Architecture"
-    ],
-    "cover": "Apple-AI-Paper.png",
-    "excerpt": "\r\n## The Story Behind Apple's \"Illusion of Thinking\"\r\n\r\nApple just dropped a paper called *\"The Illusion of Thinking: Understanding the Strengths and ...",
-    "readingTime": 14,
-    "fileName": "Apple-AI-Paper.md"
-  },
-  {
     "slug": "Digital-Stop-and-Frisk",
     "title": "The Digital Stop and Frisk: When Your Privacy Meets Border Control",
     "date": "2025-04-18",
@@ -515,6 +518,12 @@
     "excerpt": "\r\nHey there, fellow developers and space enthusiasts! I'm thrilled to share with you a project that's been consuming my nights and weekends (and let's...",
     "readingTime": 4,
     "fileName": "horizon-game-server-pt1.md"
+  },
+  {
+    "slug": "nix-enterprise",
+    "excerpt": "\r\n\r\n# Why Enterprise Will Never Adopt Nix (And Why It Shouldn't)\r\n\r\nFunctional programming languages promised software free of side effects for decade...",
+    "readingTime": 5,
+    "fileName": "nix-enterprise.md"
   },
   {
     "slug": "rise-of-tech-tribalism",
