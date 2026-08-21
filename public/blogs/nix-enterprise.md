@@ -1,4 +1,10 @@
-
+---
+title: "Why Enterprise Will Never Adopt Nix (And Why It Shouldn't)"
+date: "2026-8-21"
+categories: ["Programming", "DevOps", "Infrastructure"]
+tags: ["Nix", "Containers", "Kubernetes", "Architecture"]
+cover: "no_nix.png"
+---
 
 # Why Enterprise Will Never Adopt Nix (And Why It Shouldn't)
 
