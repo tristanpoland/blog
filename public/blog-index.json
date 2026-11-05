@@ -1,5 +1,28 @@
 [
   {
+    "slug": "the-anti-ai-itch",
+    "title": "Itch.io's AI Purge: Indie Developers Shouldn't Be Collateral Damage",
+    "date": "2026-11-05",
+    "categories": [
+      "Game Development",
+      "Indie Games",
+      "Artificial Intelligence",
+      "Platform Moderation"
+    ],
+    "tags": [
+      "itch.io",
+      "Generative AI",
+      "Indie Developers",
+      "False Positives",
+      "Content Moderation",
+      "Digital Distribution"
+    ],
+    "cover": "itchio-ai-moderation.png",
+    "excerpt": "\r\n## Introduction\r\n\r\nIn early November 2026, itch.io celebrated removing several terabytes of what it called AI-generated spam. For the segment of the...",
+    "readingTime": 10,
+    "fileName": "the-anti-ai-itch.md"
+  },
+  {
     "slug": "nix-enterprise",
     "title": "Why Enterprise Will Never Adopt Nix (And Why It Shouldn't)",
     "date": "2026-8-21",
